@@ -35,14 +35,10 @@ const {
   prepareUrls,
 } = require('react-dev-utils/WebpackDevServerUtils');
 const openBrowser = require('react-dev-utils/openBrowser');
-const semver = require('semver');
 const paths = require('../config/paths');
 const configFactory = require('../config/webpack.config');
 const createDevServerConfig = require('../config/webpackDevServer.config');
-const getClientEnvironment = require('../config/env');
-const scansio = require(require.resolve('scansio', { paths: [paths.appPath] }));
 
-const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 const useYarn = fs.existsSync(paths.yarnLockFile);
 const isInteractive = process.stdout.isTTY;
 
@@ -125,14 +121,6 @@ checkBrowsers(paths.appPath, isInteractive)
     devServer.startCallback(() => {
       if (isInteractive) {
         clearConsole();
-      }
-
-      if (env.raw.FAST_REFRESH && semver.lt(scansio.version, '16.10.0')) {
-        console.log(
-          chalk.yellow(
-            `Fast Refresh requires Scansio 16.10 or higher. You are using Scansio ${scansio.version}.`
-          )
-        );
       }
 
       console.log(chalk.cyan('Starting the development server...\n'));
