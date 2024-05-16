@@ -1,16 +1,16 @@
-import Scansio from 'scansio';
-import ScansioDOM from 'scansio-dom/client';
+import Reblend from 'reblend';
+import ReblendDOM from 'reblend-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ScansioDOM.createRoot(
+const root = ReblendDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <Scansio.StrictMode>
+  <Reblend.StrictMode>
     <App />
-  </Scansio.StrictMode>
+  </Reblend.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

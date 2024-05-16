@@ -2,14 +2,14 @@
   "name": "cra-template",
   "version": "1.2.0",
   "keywords": [
-    "scansio",
-    "create-scansio-app",
+    "reblend",
+    "create-reblend-app",
     "template"
   ],
-  "description": "The base template for Create Scansio App.",
+  "description": "The base template for Create Reblend App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scyberLink/create-scansio-app.git",
+    "url": "https://github.com/scyberLink/create-reblend-app.git",
     "directory": "packages/cra-template"
   },
   "license": "MIT",
@@ -17,7 +17,7 @@
     "node": ">=14"
   },
   "bugs": {
-    "url": "https://github.com/scyberLink/create-scansio-app/issues"
+    "url": "https://github.com/scyberLink/create-reblend-app/issues"
   },
   "files": [
     "template",

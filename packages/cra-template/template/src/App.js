@@ -11,11 +11,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://scansiojs.org"
+          href="https://reblendjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Scansio
+          Learn Reblend
         </a>
       </header>
     </div>

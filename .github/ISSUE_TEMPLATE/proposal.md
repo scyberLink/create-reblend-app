@@ -1,6 +1,6 @@
 ---
 name: Proposal
-about: Suggest an idea for improving Create Scansio App
+about: Suggest an idea for improving Create Reblend App
 labels: 'issue: proposal, needs triage'
 ---
 

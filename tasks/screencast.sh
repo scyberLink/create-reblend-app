@@ -11,8 +11,8 @@
 set -e
 
 printf '\e[32m%s\e[m' "λ "
-echo "npx create-scansio-app my-app" | pv -qL $[10+(-2 + RANDOM%5)]
-npx create-scansio-app my-app
+echo "npx create-reblend-app my-app" | pv -qL $[10+(-2 + RANDOM%5)]
+npx create-reblend-app my-app
 
 printf '\e[32m%s\e[m' "λ "
 sleep 1

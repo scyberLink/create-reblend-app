@@ -96,18 +96,18 @@ Object.keys(packagePathsByName).forEach(name => {
 console.log('Replaced all local dependencies for testing.');
 console.log('Do not edit any package.json while this task is running.');
 
-// Finally, pack scansio-scripts.
+// Finally, pack reblend-scripts.
 // Don't redirect stdio as we want to capture the output that will be returned
 // from execSync(). In this case it will be the .tgz filename.
 const scriptsFileName = cp
-  .execSync(`npm pack`, { cwd: path.join(packagesDir, 'scansio-scripts') })
+  .execSync(`npm pack`, { cwd: path.join(packagesDir, 'reblend-scripts') })
   .toString()
   .trim();
-const scriptsPath = path.join(packagesDir, 'scansio-scripts', scriptsFileName);
+const scriptsPath = path.join(packagesDir, 'reblend-scripts', scriptsFileName);
 const args = process.argv.slice(2);
 
 // Now run the CRA command
-const craScriptPath = path.join(packagesDir, 'create-scansio-app', 'index.js');
+const craScriptPath = path.join(packagesDir, 'create-reblend-app', 'index.js');
 cp.execSync(
   `node ${craScriptPath} ${args.join(' ')} --scripts-version="${scriptsPath}"`,
   {

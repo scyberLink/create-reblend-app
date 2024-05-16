@@ -50,15 +50,15 @@ while [ "$1" != "" ]; do
 done
 
 read -r -d '' apply_changes <<- CMD
-cd /var/create-scansio-app
-git config --global user.name "Create Scansio App"
+cd /var/create-reblend-app
+git config --global user.name "Create Reblend App"
 git config --global user.email "cra@email.com"
 git stash save -u
 git stash show -p > patch
 git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 stash^3 >> patch
 git stash pop
 cd -
-mv /var/create-scansio-app/patch .
+mv /var/create-reblend-app/patch .
 git apply patch
 rm patch
 git add -A
@@ -73,8 +73,8 @@ read -r -d '' command <<- CMD
 npm install npm@8 -g
 export PATH=\$(npm config get prefix -g)/bin:\$PATH
 set -x
-git clone /var/create-scansio-app create-scansio-app --branch ${git_branch}
-cd create-scansio-app
+git clone /var/create-reblend-app create-reblend-app --branch ${git_branch}
+cd create-reblend-app
 ${apply_changes}
 node --version
 npm --version
@@ -98,7 +98,7 @@ docker run \
   --tty \
   --rm \
   --user node \
-  --volume ${PWD}/..:/var/create-scansio-app \
+  --volume ${PWD}/..:/var/create-reblend-app \
   --workdir /home/node \
   $([[ ${interactive} == 'true' ]] && echo '--interactive') \
   node:${node_version} \

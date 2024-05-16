@@ -17,10 +17,8 @@
   },
   "overrides": [
     {
-      "files": [
-        "packages/cra-template/**/*.js"
-      ],
-      "extends": ["react-app", "react-app/jest"]
+      "files": ["packages/cra-template/**/*.js"],
+      "extends": ["reblend-app", "reblend-app/jest"]
     }
   ]
 }

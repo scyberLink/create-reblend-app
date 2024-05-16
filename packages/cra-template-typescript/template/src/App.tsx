@@ -1,4 +1,4 @@
-import Scansio from 'scansio';
+import Reblend from 'reblend';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,11 +12,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://scansiojs.org"
+          href="https://reblendjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Scansio
+          Learn Reblend
         </a>
       </header>
     </div>

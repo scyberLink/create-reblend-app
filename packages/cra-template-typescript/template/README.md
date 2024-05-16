@@ -1,6 +1,6 @@
-# Getting Started with Create Scansio App
+# Getting Started with Create Reblend App
 
-This project was bootstrapped with [Create Scansio App](https://github.com/scyberLink/create-scansio-app).
+This project was bootstrapped with [Create Reblend App](https://github.com/scyberLink/create-reblend-app).
 
 ## Available Scripts
 
@@ -17,17 +17,17 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://scyberLink.github.io/create-scansio-app/docs/running-tests) for more information.
+See the section about [running tests](https://scyberLink.github.io/create-reblend-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles Scansio in production mode and optimizes the build for the best performance.
+It correctly bundles Reblend in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://scyberLink.github.io/create-scansio-app/docs/deployment) for more information.
+See the section about [deployment](https://scyberLink.github.io/create-reblend-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -41,6 +41,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create Scansio App documentation](https://scyberLink.github.io/create-scansio-app/docs/getting-started).
+You can learn more in the [Create Reblend App documentation](https://scyberLink.github.io/create-reblend-app/docs/getting-started).
 
-To learn Scansio, check out the [Scansio documentation](https://scansiojs.org/).
+To learn Reblend, check out the [Reblend documentation](https://reblendjs.org/).
