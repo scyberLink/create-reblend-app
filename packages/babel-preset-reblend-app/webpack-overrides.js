@@ -23,7 +23,7 @@ module.exports = function () {
       if (macroCheck.test(source)) {
         return Object.assign({}, config.options, {
           caller: Object.assign({}, config.options.caller, {
-            craInvalidationToken: crypto.randomBytes(32).toString('hex'),
+            crebaInvalidationToken: crypto.randomBytes(32).toString('hex'),
           }),
         });
       }

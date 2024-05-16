@@ -12,7 +12,7 @@
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
 
-// Makes the script crash on unhandled rejections instead of silently
+// Makes the script crebash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
 process.on('unhandledRejection', err => {
@@ -42,7 +42,7 @@ const createDevServerConfig = require('../config/webpackDevServer.config');
 const useYarn = fs.existsSync(paths.yarnLockFile);
 const isInteractive = process.stdout.isTTY;
 
-// Warn and crash if required files are missing
+// Warn and crebash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
 }
@@ -63,7 +63,7 @@ if (process.env.HOST) {
     `If this was unintentional, check that you haven't mistakenly set it in your shell.`
   );
   console.log(
-    `Learn more here: ${chalk.yellow('https://cra.link/advanced-config')}`
+    `Learn more here: ${chalk.yellow('https://creba.link/advanced-config')}`
   );
   console.log();
 }

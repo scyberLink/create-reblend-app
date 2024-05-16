@@ -7,7 +7,7 @@
  */
 'use strict';
 
-// Makes the script crash on unhandled rejections instead of silently
+// Makes the script crebash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
 process.on('unhandledRejection', err => {
@@ -126,7 +126,7 @@ module.exports = function (
 
   const templatePackage = templateJson.package || {};
 
-  // This was deprecated in CRA v5.
+  // This was deprecated in CREBA v5.
   if (templateJson.dependencies || templateJson.scripts) {
     console.log();
     console.log(
@@ -135,7 +135,7 @@ module.exports = function (
           'This template needs to be updated to use the new `package` key.'
       )
     );
-    console.log('For more information, visit https://cra.link/templates');
+    console.log('For more information, visit https://creba.link/templates');
   }
 
   // Keys to ignore in templatePackage
@@ -311,7 +311,7 @@ module.exports = function (
     );
   }
 
-  // Install reblend and reblend-dom for backward compatibility with old CRA cli
+  // Install reblend and reblend-dom for backward compatibility with old CREBA cli
   // which doesn't install reblend and reblend-dom along with reblend-scripts
   if (!isReblendInstalled(appPackage)) {
     args = args.concat(['reblend', 'reblend-dom']);

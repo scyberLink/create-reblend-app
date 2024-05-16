@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cd packages/reblend-scripts && node bin/reblend-scripts.js build",
     "changelog": "lerna-changelog",
-    "create-reblend-app": "node tasks/cra.js",
+    "create-reblend-app": "node tasks/creba.js",
     "postinstall": "npm run build",
     "publish": "tasks/publish.sh",
     "start": "cd packages/reblend-scripts && node bin/reblend-scripts.js start",

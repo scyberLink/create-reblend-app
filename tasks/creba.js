@@ -106,10 +106,16 @@ const scriptsFileName = cp
 const scriptsPath = path.join(packagesDir, 'reblend-scripts', scriptsFileName);
 const args = process.argv.slice(2);
 
-// Now run the CRA command
-const craScriptPath = path.join(packagesDir, 'create-reblend-app', 'index.js');
+// Now run the CREBA command
+const crebaScriptPath = path.join(
+  packagesDir,
+  'create-reblend-app',
+  'index.js'
+);
 cp.execSync(
-  `node ${craScriptPath} ${args.join(' ')} --scripts-version="${scriptsPath}"`,
+  `node ${crebaScriptPath} ${args.join(
+    ' '
+  )} --scripts-version="${scriptsPath}"`,
   {
     cwd: rootDir,
     stdio: 'inherit',

@@ -54,8 +54,8 @@ These packages can be found in the [`packages/`](https://github.com/scyberLink/c
 
 ```
 packages/
-  cra-template/
-  cra-template-typescript/
+  creba-template/
+  creba-template-typescript/
   create-reblend-app/
   reblend-scripts/
 ```
@@ -95,7 +95,7 @@ You will need `npm@7` and `yarn@1` in order to bootstrap and test a local copy o
 
 2. Run `npm install` in the root `create-reblend-app` folder.
 
-Once it is done, you can modify any file locally and run `npm start`, `npm test` or `npm run build` like you can in a generated project. It will serve the application from the files located in `packages/cra-template/template`.
+Once it is done, you can modify any file locally and run `npm start`, `npm test` or `npm run build` like you can in a generated project. It will serve the application from the files located in `packages/creba-template/template`.
 
 If you want to try out the end-to-end flow with the global CLI, you can do this too:
 

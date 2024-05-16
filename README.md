@@ -157,7 +157,7 @@ Your environment will have everything you need to build a modern single-page Reb
 - An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://scyberLink.github.io/create-reblend-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `reblend-scripts@2.0.0` and higher_)
 - Hassle-free updates for the above tools with a single dependency.
 
-Check out [this guide](https://github.com/nitishdayal/cra_closer_look) for an overview of how these tools fit together.
+Check out [this guide](https://github.com/nitishdayal/creba_closer_look) for an overview of how these tools fit together.
 
 The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://scyberLink.github.io/create-reblend-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
 

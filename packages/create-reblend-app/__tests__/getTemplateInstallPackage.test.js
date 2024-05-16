@@ -10,73 +10,73 @@
 const { getTemplateInstallPackage } = require('../createReblendApp');
 
 describe('getTemplateInstallPackage', () => {
-  it('no options gives cra-template', async () => {
-    await expect(getTemplateInstallPackage()).resolves.toBe('cra-template');
+  it('no options gives creba-template', async () => {
+    await expect(getTemplateInstallPackage()).resolves.toBe('creba-template');
   });
 
-  it('cra-template gives cra-template', async () => {
-    await expect(getTemplateInstallPackage('cra-template')).resolves.toBe(
-      'cra-template'
+  it('creba-template gives creba-template', async () => {
+    await expect(getTemplateInstallPackage('creba-template')).resolves.toBe(
+      'creba-template'
     );
   });
 
-  it('cra-template-typescript gives cra-template-typescript', async () => {
+  it('creba-template-typescript gives creba-template-typescript', async () => {
     await expect(
-      getTemplateInstallPackage('cra-template-typescript')
-    ).resolves.toBe('cra-template-typescript');
+      getTemplateInstallPackage('creba-template-typescript')
+    ).resolves.toBe('creba-template-typescript');
   });
 
-  it('typescript gives cra-template-typescript', async () => {
+  it('typescript gives creba-template-typescript', async () => {
     await expect(getTemplateInstallPackage('typescript')).resolves.toBe(
-      'cra-template-typescript'
+      'creba-template-typescript'
     );
   });
 
-  it('typescript@next gives cra-template-typescript@next', async () => {
+  it('typescript@next gives creba-template-typescript@next', async () => {
     await expect(getTemplateInstallPackage('typescript@next')).resolves.toBe(
-      'cra-template-typescript@next'
+      'creba-template-typescript@next'
     );
   });
 
-  it('cra-template@next gives cra-template@next', async () => {
-    await expect(getTemplateInstallPackage('cra-template@next')).resolves.toBe(
-      'cra-template@next'
-    );
-  });
-
-  it('cra-template-typescript@next gives cra-template-typescript@next', async () => {
+  it('creba-template@next gives creba-template@next', async () => {
     await expect(
-      getTemplateInstallPackage('cra-template-typescript@next')
-    ).resolves.toBe('cra-template-typescript@next');
+      getTemplateInstallPackage('creba-template@next')
+    ).resolves.toBe('creba-template@next');
   });
 
-  it('@iansu gives @iansu/cra-template', async () => {
+  it('creba-template-typescript@next gives creba-template-typescript@next', async () => {
+    await expect(
+      getTemplateInstallPackage('creba-template-typescript@next')
+    ).resolves.toBe('creba-template-typescript@next');
+  });
+
+  it('@iansu gives @iansu/creba-template', async () => {
     await expect(getTemplateInstallPackage('@iansu')).resolves.toBe(
-      '@iansu/cra-template'
+      '@iansu/creba-template'
     );
   });
 
-  it('@iansu/cra-template gives @iansu/cra-template', async () => {
+  it('@iansu/creba-template gives @iansu/creba-template', async () => {
     await expect(
-      getTemplateInstallPackage('@iansu/cra-template')
-    ).resolves.toBe('@iansu/cra-template');
+      getTemplateInstallPackage('@iansu/creba-template')
+    ).resolves.toBe('@iansu/creba-template');
   });
 
-  it('@iansu/cra-template@next gives @iansu/cra-template@next', async () => {
+  it('@iansu/creba-template@next gives @iansu/creba-template@next', async () => {
     await expect(
-      getTemplateInstallPackage('@iansu/cra-template@next')
-    ).resolves.toBe('@iansu/cra-template@next');
+      getTemplateInstallPackage('@iansu/creba-template@next')
+    ).resolves.toBe('@iansu/creba-template@next');
   });
 
-  it('@iansu/cra-template-typescript@next gives @iansu/cra-template-typescript@next', async () => {
+  it('@iansu/creba-template-typescript@next gives @iansu/creba-template-typescript@next', async () => {
     await expect(
-      getTemplateInstallPackage('@iansu/cra-template-typescript@next')
-    ).resolves.toBe('@iansu/cra-template-typescript@next');
+      getTemplateInstallPackage('@iansu/creba-template-typescript@next')
+    ).resolves.toBe('@iansu/creba-template-typescript@next');
   });
 
-  it('http://example.com/cra-template.tar.gz gives http://example.com/cra-template.tar.gz', async () => {
+  it('http://example.com/creba-template.tar.gz gives http://example.com/creba-template.tar.gz', async () => {
     await expect(
-      getTemplateInstallPackage('http://example.com/cra-template.tar.gz')
-    ).resolves.toBe('http://example.com/cra-template.tar.gz');
+      getTemplateInstallPackage('http://example.com/creba-template.tar.gz')
+    ).resolves.toBe('http://example.com/creba-template.tar.gz');
   });
 });

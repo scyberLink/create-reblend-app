@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-reblend-app",
-  "version": "11.0.6",
+  "version": "11.0.7",
   "description": "Babel preset used by Create Reblend App",
   "repository": {
     "type": "git",
@@ -38,5 +38,6 @@
     "@babel/runtime": "^7.16.3",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
-  }
+  },
+  "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
 }

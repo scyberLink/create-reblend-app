@@ -1,4 +1,4 @@
-# cra-template-typescript
+# creba-template-typescript
 
 This is the official TypeScript template for [Create Reblend App](https://github.com/scyberLink/create-reblend-app).
 

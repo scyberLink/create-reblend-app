@@ -1,4 +1,4 @@
-# cra-template
+# creba-template
 
 This is the official base template for [Create Reblend App](https://github.com/scyberLink/create-reblend-app).
 

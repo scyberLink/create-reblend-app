@@ -1,6 +1,6 @@
 {
-  "name": "cra-template",
-  "version": "2.0.6",
+  "name": "creba-template",
+  "version": "2.0.7",
   "keywords": [
     "reblend",
     "create-reblend-app",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/scyberLink/create-reblend-app.git",
-    "directory": "packages/cra-template"
+    "directory": "packages/creba-template"
   },
   "license": "MIT",
   "engines": {
@@ -22,5 +22,6 @@
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
 }

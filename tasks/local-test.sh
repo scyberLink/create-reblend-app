@@ -52,7 +52,7 @@ done
 read -r -d '' apply_changes <<- CMD
 cd /var/create-reblend-app
 git config --global user.name "Create Reblend App"
-git config --global user.email "cra@email.com"
+git config --global user.email "creba@email.com"
 git stash save -u
 git stash show -p > patch
 git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 stash^3 >> patch

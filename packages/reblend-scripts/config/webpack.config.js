@@ -697,7 +697,7 @@ module.exports = function (webpackEnv) {
           exclude: [/\.map$/, /asset-manifest\.json$/, /LICENSE/],
           // Bump up the default maximum size (2mb) that's precached,
           // to make lazy-loading failure scenarios less likely.
-          // See https://github.com/cra-template/pwa/issues/13#issuecomment-722667270
+          // See https://github.com/creba-template/pwa/issues/13#issuecomment-722667270
           maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         }),
       // TypeScript type checking
@@ -731,7 +731,7 @@ module.exports = function (webpackEnv) {
           issue: {
             // This one is specifically to match during CI tests,
             // as micromatch doesn't match
-            // '../cra-template-typescript/template/src/App.tsx'
+            // '../creba-template-typescript/template/src/App.tsx'
             // otherwise.
             include: [
               { file: '../**/src/**/*.{ts,tsx}' },

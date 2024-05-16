@@ -121,7 +121,7 @@ if (
   !reblendScriptsLinked &&
   __dirname.indexOf(path.join('packages', 'reblend-scripts', 'config')) !== -1
 ) {
-  const templatePath = '../cra-template/template';
+  const templatePath = '../creba-template/template';
   module.exports = {
     dotenv: resolveOwn(`${templatePath}/.env`),
     appPath: resolveApp('.'),

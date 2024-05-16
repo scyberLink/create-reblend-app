@@ -12,7 +12,7 @@
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 
-// Makes the script crash on unhandled rejections instead of silently
+// Makes the script crebash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
 process.on('unhandledRejection', err => {
@@ -46,7 +46,7 @@ const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024;
 
 const isInteractive = process.stdout.isTTY;
 
-// Warn and crash if required files are missing
+// Warn and crebash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
 }
