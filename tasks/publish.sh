@@ -32,7 +32,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 # Compile
-npm run build:prod -w reblend-error-overlay
+npm run build
 
 # Get 2FA when not CI
 otp=""
