@@ -16,7 +16,7 @@ const hasJsxRuntime = (() => {
   }
 
   try {
-    require.resolve('reblend');
+    require.resolve('reblendjs');
     return true;
   } catch (e) {
     return false;

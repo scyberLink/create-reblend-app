@@ -109,7 +109,7 @@ module.exports = function (api, opts, env) {
       // https://github.com/scyberLink/create-reblend-app/pull/5182
       // We will conditionally enable this plugin below in overrides as it clashes with
       // @babel/plugin-proposal-decorators when using TypeScript.
-      // https://github.com/scyberLink/create-react-app/issues/5741
+      // https://github.com/scyberLink/create-reblend-app/issues/5741
       isFlowEnabled && [
         require('@babel/plugin-transform-flow-strip-types').default,
         false,
@@ -119,7 +119,7 @@ module.exports = function (api, opts, env) {
       require('babel-plugin-macros'),
       // Disabled as it's handled automatically by preset-env, and `selectiveLoose` isn't
       // yet merged into babel: https://github.com/babel/babel/pull/9486
-      // Related: https://github.com/scyberLink/create-react-app/pull/8215
+      // Related: https://github.com/scyberLink/create-reblend-app/pull/8215
       // [
       //   require('@babel/plugin-transform-destructuring').default,
       //   {

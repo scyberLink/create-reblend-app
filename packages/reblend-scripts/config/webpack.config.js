@@ -83,7 +83,7 @@ const hasJsxRuntime = (() => {
   }
 
   try {
-    require.resolve('reblend');
+    require.resolve('reblendjs');
     return true;
   } catch (e) {
     return false;
@@ -106,8 +106,6 @@ module.exports = function (webpackEnv) {
   // Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
   // Get environment variables to inject into our app.
   const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
-
-  const shouldUseReblendRefresh = env.raw.FAST_REFRESH;
 
   // common function to get style loaders
   const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -314,7 +312,7 @@ module.exports = function (webpackEnv) {
       extensions: paths.moduleFileExtensions
         .map(ext => `.${ext}`)
         .filter(ext => useTypeScript || !ext.includes('ts')),
-      alias: {
+      /* alias: {
         // Support Reblend Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-reblend-native-for-web/
         'react-native': 'react-native-web',
@@ -324,7 +322,7 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
-      },
+      }, */
       plugins: [
         // Prevents users from importing files from outside of src/ (or node_modules/).
         // This often causes confusion because we only process files within src/ with babel.
@@ -765,10 +763,10 @@ module.exports = function (webpackEnv) {
           cwd: paths.appPath,
           resolvePluginsRelativeTo: __dirname,
           baseConfig: {
-            extends: [require.resolve('eslint-config-react-app/base')],
+            extends: [require.resolve('eslint-config-reblend-app/base')],
             rules: {
               ...(!hasJsxRuntime && {
-                'react/react-in-jsx-scope': 'error',
+                'reblend/reblend-in-jsx-scope': 'error',
               }),
             },
           },
