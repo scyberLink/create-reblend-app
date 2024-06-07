@@ -311,13 +311,13 @@ module.exports = function (
     );
   }
 
-  // Install reblend and reblend-dom for backward compatibility with old CREBA cli
-  // which doesn't install reblend and reblend-dom along with reblend-scripts
+  // Install reblend for backward compatibility with old CREBA cli
+  // which doesn't install reblend along with reblend-scripts
   if (!isReblendInstalled(appPackage)) {
-    args = args.concat(['reblend', 'reblend-dom']);
+    args = args.concat(['reblendjs']);
   }
 
-  // Install template dependencies, and reblend and reblend-dom if missing.
+  // Install template dependencies, and reblend if missing.
   if ((!isReblendInstalled(appPackage) || templateName) && args.length > 1) {
     console.log();
     console.log(`Installing template dependencies using ${command}...`);
@@ -409,8 +409,5 @@ module.exports = function (
 function isReblendInstalled(appPackage) {
   const dependencies = appPackage.dependencies || {};
 
-  return (
-    typeof dependencies.reblend !== 'undefined' &&
-    typeof dependencies['reblend-dom'] !== 'undefined'
-  );
+  return typeof dependencies.reblend !== 'undefined';
 }

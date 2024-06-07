@@ -1,4 +1,4 @@
-import Reblend from 'reblend';
+import Reblend from 'reblendjs';
 import logo from './logo.svg';
 import './App.css';
 

@@ -1,6 +1,5 @@
 /// <reference types="node" />
-/// <reference types="reblend" />
-/// <reference types="reblend-dom" />
+/// <reference types="reblendjs" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
@@ -45,7 +44,7 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
-  import * as Reblend from 'reblend';
+  import * as Reblend from 'reblendjs';
 
   export const ReblendComponent: Reblend.FunctionComponent<
     Reblend.SVGProps<SVGSVGElement> & { title?: string }

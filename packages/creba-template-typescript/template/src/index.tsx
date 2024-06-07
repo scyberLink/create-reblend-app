@@ -1,18 +1,9 @@
-import Reblend from 'reblend';
-import ReblendDOM from 'reblend-dom/client';
+import Reblend from 'reblendjs';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReblendDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <Reblend.StrictMode>
-    <App />
-  </Reblend.StrictMode>
-);
-
+document.getElementById('root')?.append(<App />);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CREBA-vitals

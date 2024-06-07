@@ -2,12 +2,9 @@
   "package": {
     "dependencies": {
       "@testing-library/jest-dom": "^5.14.1",
-      "@testing-library/reblend": "^13.0.0",
       "@testing-library/user-event": "^13.2.1",
       "@types/jest": "^27.0.1",
       "@types/node": "^16.7.13",
-      "@types/reblend": "^18.0.0",
-      "@types/reblend-dom": "^18.0.0",
       "typescript": "^4.4.2",
       "web-vitals": "^2.1.0"
     },

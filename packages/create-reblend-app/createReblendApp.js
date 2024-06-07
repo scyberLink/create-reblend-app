@@ -161,7 +161,7 @@ function init() {
             'Firefox',
             'Safari',
           ],
-          npmPackages: ['reblend', 'reblend-dom', 'reblend-scripts'],
+          npmPackages: ['reblend', 'reblend-scripts'],
           npmGlobalPackages: ['create-reblend-app'],
         },
         {
@@ -409,7 +409,7 @@ function run(
     getInstallPackage(version, originalDirectory),
     getTemplateInstallPackage(template, originalDirectory),
   ]).then(([packageToInstall, templateToInstall]) => {
-    const allDependencies = ['reblend', 'reblend-dom', packageToInstall];
+    const allDependencies = ['reblendjs', packageToInstall];
 
     console.log('Installing packages. This might take a couple of minutes.');
 
@@ -452,9 +452,9 @@ function run(
         }
 
         console.log(
-          `Installing ${chalk.cyan('reblend')}, ${chalk.cyan(
-            'reblend-dom'
-          )}, and ${chalk.cyan(packageInfo.name)}${
+          `Installing ${chalk.cyan('reblend')}, and ${chalk.cyan(
+            packageInfo.name
+          )}${
             supportsTemplates ? ` with ${chalk.cyan(templateInfo.name)}` : ''
           }...`
         );
@@ -841,7 +841,7 @@ function checkAppName(appName) {
   }
 
   // TODO: there should be a single place that holds the dependencies
-  const dependencies = ['reblend', 'reblend-dom', 'reblend-scripts'].sort();
+  const dependencies = ['reblendjs', 'reblend-scripts'].sort();
   if (dependencies.includes(appName)) {
     console.error(
       chalk.red(
@@ -895,7 +895,6 @@ function setCaretRangeForRuntimeDeps(packageName) {
   }
 
   makeCaretRange(packageJson.dependencies, 'reblend');
-  makeCaretRange(packageJson.dependencies, 'reblend-dom');
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2) + os.EOL);
 }
