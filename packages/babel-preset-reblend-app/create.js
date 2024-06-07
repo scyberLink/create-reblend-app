@@ -75,7 +75,7 @@ module.exports = function (api, opts, env) {
           },
         },
       ],
-      (isEnvProduction || isEnvDevelopment) && [
+      /* (isEnvProduction || isEnvDevelopment) && */ [
         // Latest stable ECMAScript features
         require('@babel/preset-env').default,
         {
@@ -88,7 +88,7 @@ module.exports = function (api, opts, env) {
         },
       ],
       [
-        require('@babel/preset-react').default,
+        require('babel-preset-reblend').default,
         {
           // Adds component stack to warning messages
           // Adds __self attribute to JSX which Reblend will use for some warnings
@@ -97,7 +97,7 @@ module.exports = function (api, opts, env) {
           // behavior for any plugins that require one.
           ...(opts.runtime !== 'automatic' ? { useBuiltIns: true } : {}),
           runtime: opts.runtime || 'classic',
-          pragma: 'Reblend',
+          pragma: 'Reblend.construct',
           pragmaFrag: 'Reblend',
         },
       ],
@@ -195,14 +195,14 @@ module.exports = function (api, opts, env) {
           // https://github.com/babel/babel/blob/090c364a90fe73d36a30707fc612ce037bdbbb24/packages/babel-plugin-transform-runtime/src/index.js#L35-L42
           absoluteRuntime: absoluteRuntimePath,
         },
-      ],
+      ] /* ,
       isEnvProduction && [
         // Remove PropTypes from production build
         require('babel-plugin-transform-react-remove-prop-types').default,
         {
           removeImport: true,
         },
-      ],
+      ] */,
       // Optional chaining and nullish coalescing are supported in @babel/preset-env,
       // but not yet supported in webpack due to support missing from acorn.
       // These can be removed once webpack has support.

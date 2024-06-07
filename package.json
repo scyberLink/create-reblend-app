@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cd packages/reblend-scripts && node bin/reblend-scripts.js build",
     "changelog": "lerna-changelog",
+    "npm": "tasks/npm.sh",
     "create-reblend-app": "node tasks/creba.js",
     "postinstall": "npm run build",
     "publish": "tasks/publish.sh",
@@ -20,7 +21,7 @@
   "devDependencies": {
     "alex": "^8.2.0",
     "eslint": "^8.3.0",
-    "eslint-config-reblend-app": "^7.0.4",
+    "eslint-config-reblend-app": "^7.0.5",
     "eslint-plugin-reblend-hooks": "^5.0.3",
     "fs-extra": "^10.0.0",
     "get-port": "^5.1.1",
@@ -50,5 +51,17 @@
   },
   "dependencies": {
     "babel-preset-reblend-app": "^11.0.8"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

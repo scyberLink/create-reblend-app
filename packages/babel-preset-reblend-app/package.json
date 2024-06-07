@@ -30,14 +30,13 @@
     "@babel/plugin-proposal-private-methods": "^7.16.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@babel/plugin-transform-flow-strip-types": "^7.16.0",
-    "@babel/plugin-transform-react-display-name": "^7.16.0",
+    "babel-plugin-transform-reblend-display-name": "latest",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
+    "babel-preset-reblend": "latest",
     "@babel/preset-typescript": "^7.16.0",
     "@babel/runtime": "^7.16.3",
-    "babel-plugin-macros": "^3.1.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
+    "babel-plugin-macros": "^3.1.0"
   },
   "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
 }
