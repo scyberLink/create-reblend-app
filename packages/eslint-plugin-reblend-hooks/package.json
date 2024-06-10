@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-reblend-hooks",
   "description": "ESLint rules for Reblend Hooks",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/facebook/reblend.git",
