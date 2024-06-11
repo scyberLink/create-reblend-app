@@ -36,7 +36,7 @@
     "@babel/runtime": "^7.16.3",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-transform-reblend-display-name": "latest",
-    "babel-preset-reblend": "latest"
+    "babel-preset-reblend": "^7.24.21"
   },
   "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
 }
