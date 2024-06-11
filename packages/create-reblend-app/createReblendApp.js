@@ -161,7 +161,7 @@ function init() {
             'Firefox',
             'Safari',
           ],
-          npmPackages: ['reblend', 'reblend-scripts'],
+          npmPackages: ['reblendjs', 'reblend-scripts'],
           npmGlobalPackages: ['create-reblend-app'],
         },
         {
@@ -452,7 +452,7 @@ function run(
         }
 
         console.log(
-          `Installing ${chalk.cyan('reblend')}, and ${chalk.cyan(
+          `Installing ${chalk.cyan('reblendjs')}, and ${chalk.cyan(
             packageInfo.name
           )}${
             supportsTemplates ? ` with ${chalk.cyan(templateInfo.name)}` : ''

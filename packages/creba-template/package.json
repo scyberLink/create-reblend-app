@@ -24,5 +24,8 @@
     "template",
     "template.json"
   ],
-  "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
+  "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f",
+  "dependencies": {
+    "reblendjs": "^2.0.4"
+  }
 }
