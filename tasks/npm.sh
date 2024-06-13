@@ -10,6 +10,7 @@ for dir in "$base_dir"/*; do
   # Check if it's a directory (avoid hidden files, etc.)
   if [ -d "$dir" ]; then
     # Change directory to the current package directory
+    echo "Running \"npm $1\" for \"$dir\"\n\n"
     cd "$dir"
 
     # Install dependencies using npm install
