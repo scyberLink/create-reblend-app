@@ -165,7 +165,7 @@ module.exports = function (webpackEnv) {
                   ],
                 ],
           },
-          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+          sourceMap: false, //isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },
       },
     ].filter(Boolean);
@@ -249,8 +249,8 @@ module.exports = function (webpackEnv) {
       level: 'none',
     },
     optimization: {
-      minimize: isEnvProduction,
-      minimizer: [
+      minimize: false, //isEnvProduction,
+      /* minimizer: [
         // This is only used in production mode
         new TerserPlugin({
           terserOptions: {
@@ -293,7 +293,7 @@ module.exports = function (webpackEnv) {
         }),
         // This is only used in production mode
         new CssMinimizerPlugin(),
-      ],
+      ], */
     },
     resolve: {
       // This allows you to set a fallback for where webpack should look for modules.

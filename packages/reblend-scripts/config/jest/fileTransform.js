@@ -17,7 +17,7 @@ module.exports = {
         pascalCase: true,
       });
       const componentName = `Svg${pascalCaseFilename}`;
-      return `const Reblend = require('reblend');
+      return `const Reblend = require('reblendjs');
       module.exports = {
         __esModule: true,
         default: ${assetFilename},
