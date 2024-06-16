@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-reblend-app",
-  "version": "11.0.14",
+  "version": "11.0.15",
   "description": "Babel preset used by Create Reblend App",
   "repository": {
     "type": "git",
