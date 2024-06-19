@@ -15,7 +15,7 @@ for dir in "$base_dir"/*; do
     cd "$dir"
 
     # Install dependencies using npm install
-    exec npm $1
+    npm $1
 
     # Move back to the base directory (optional)
     cd $ROOT
