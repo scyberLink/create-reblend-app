@@ -77,7 +77,7 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
-const hasJsxRuntime = (() => {
+/* const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
     return false;
   }
@@ -88,7 +88,7 @@ const hasJsxRuntime = (() => {
   } catch (e) {
     return false;
   }
-})();
+})(); */
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -416,7 +416,7 @@ module.exports = function (webpackEnv) {
                   [
                     require.resolve('babel-preset-reblend-app'),
                     {
-                      runtime: hasJsxRuntime ? 'automatic' : 'classic',
+                      runtime: /* hasJsxRuntime ? 'automatic' : */ 'classic',
                     },
                   ],
                 ],
@@ -765,9 +765,9 @@ module.exports = function (webpackEnv) {
           baseConfig: {
             extends: [require.resolve('eslint-config-reblend-app/base')],
             rules: {
-              ...(!hasJsxRuntime && {
+              .../* !hasJsxRuntime && */ {
                 'reblend/reblend-in-jsx-scope': 'error',
-              }),
+              },
             },
           },
         }),

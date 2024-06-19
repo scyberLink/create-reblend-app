@@ -10,7 +10,7 @@
 
 const babelJest = require('babel-jest').default;
 
-const hasJsxRuntime = (() => {
+/* const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
     return false;
   }
@@ -21,14 +21,14 @@ const hasJsxRuntime = (() => {
   } catch (e) {
     return false;
   }
-})();
+})(); */
 
 module.exports = babelJest.createTransformer({
   presets: [
     [
       require('babel-preset-reblend-app'),
       {
-        runtime: hasJsxRuntime ? 'automatic' : 'classic',
+        runtime: /* hasJsxRuntime ? 'automatic' :  */ 'classic',
       },
     ],
   ],
