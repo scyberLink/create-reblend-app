@@ -49,6 +49,8 @@ const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
   paths: [babelRuntimeEntry],
 });
 
+const presetReblendApp = require.resolve('babel-preset-reblend-app');
+
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
@@ -414,7 +416,7 @@ module.exports = function (webpackEnv) {
                 ),
                 presets: [
                   [
-                    require.resolve('babel-preset-reblend-app'),
+                    presetReblendApp,
                     {
                       runtime: /* hasJsxRuntime ? 'automatic' : */ 'classic',
                     },

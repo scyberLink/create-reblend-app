@@ -35,7 +35,7 @@
     "@babel/preset-typescript": "^7.16.0",
     "@babel/runtime": "^7.16.3",
     "babel-plugin-macros": "^3.1.0",
-    "babel-preset-reblend": "^7.24.25"
+    "babel-preset-reblend": "^7.24.29"
   },
   "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f"
 }
