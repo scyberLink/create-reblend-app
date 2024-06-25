@@ -16,7 +16,7 @@ function App() {
         <Alert show={showAlert}>Happy Reblend</Alert>
         <p
           onmouseover={() => setShowAlert(true)}
-          onmouseout={() => setShowAlert(false)}
+          onclick={() => setShowAlert(false)}
         >
           Edit <code>src/App.js</code> and save to reload. {i}
         </p>
