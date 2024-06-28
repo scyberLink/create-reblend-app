@@ -12,7 +12,7 @@ import ExhaustiveDeps from './ExhaustiveDeps';
 
 export const configs = {
   recommended: {
-    plugins: ['reblend-hooks'],
+    plugins: ['eslint-plugin-reblend-hooks'],
     rules: {
       'reblend-hooks/rules-of-hooks': 'error',
       'reblend-hooks/exhaustive-deps': 'warn',

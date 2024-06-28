@@ -21,8 +21,8 @@
   "devDependencies": {
     "alex": "^8.2.0",
     "eslint": "^8.3.0",
-    "eslint-config-reblend-app": "^7.0.12",
-    "eslint-plugin-reblend-hooks": "^5.0.5",
+    "eslint-config-reblend-app": "^7.0.15",
+    "eslint-plugin-reblend-hooks": "^5.0.7",
     "fs-extra": "^10.0.0",
     "get-port": "^5.1.1",
     "globby": "^11.0.4",
