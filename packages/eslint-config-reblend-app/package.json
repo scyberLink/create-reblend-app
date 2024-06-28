@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-reblend-app",
-  "version": "7.0.16",
+  "version": "7.0.17",
   "description": "ESLint configuration used by Create Reblend App",
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-reblend": "^7.27.1",
-    "eslint-plugin-reblend-hooks": "^5.0.8",
+    "eslint-plugin-reblend-hooks": "^5.0.9",
     "eslint-plugin-testing-library": "^5.0.1"
   },
   "engines": {
