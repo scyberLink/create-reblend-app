@@ -12,6 +12,8 @@
     "LICENSE",
     "README.md",
     "src/index.js",
+    "src/ExhaustiveDeps.js",
+    "src/RulesOfHooks.js",
     "cjs"
   ],
   "keywords": [
