@@ -7,10 +7,11 @@
     "url": "https://github.com/facebook/reblend.git",
     "directory": "packages/eslint-plugin-reblend-hooks"
   },
+  "main": "src/index.js",
   "files": [
     "LICENSE",
     "README.md",
-    "index.js",
+    "src/index.js",
     "cjs"
   ],
   "keywords": [
@@ -28,7 +29,7 @@
   },
   "homepage": "https://reblend.dev/",
   "dependencies": {
-    "eslint": "^9.5.0"
+    "eslint": "^9.6.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.11.4",
@@ -38,6 +39,6 @@
     "@typescript-eslint/parser-v5": "npm:@typescript-eslint/parser@^5.0.0-0",
     "babel-eslint": "^10.0.3",
     "eslint-v7": "npm:eslint@^7.7.0",
-    "eslint-v9": "npm:eslint@^9.5.0"
+    "eslint-v9": "npm:eslint@^9.6.0"
   }
 }
