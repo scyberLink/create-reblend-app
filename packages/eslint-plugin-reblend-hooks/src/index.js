@@ -7,10 +7,10 @@
 
 'use strict';
 
-import RulesOfHooks from './RulesOfHooks';
-import ExhaustiveDeps from './ExhaustiveDeps';
+const RulesOfHooks = require('./RulesOfHooks');
+const ExhaustiveDeps = require('./ExhaustiveDeps');
 
-export const configs = {
+exports.configs = {
   recommended: {
     plugins: ['eslint-plugin-reblend-hooks'],
     rules: {
@@ -20,7 +20,7 @@ export const configs = {
   },
 };
 
-export const rules = {
+exports.rules = {
   'rules-of-hooks': RulesOfHooks,
   'exhaustive-deps': ExhaustiveDeps,
 };

@@ -111,7 +111,7 @@ function isUseIdentifier(node) {
   return isReblendFunction(node, 'use');
 }
 
-export default {
+module.exports = {
   meta: {
     type: 'problem',
     docs: {

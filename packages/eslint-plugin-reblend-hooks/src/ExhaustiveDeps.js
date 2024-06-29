@@ -9,7 +9,7 @@
 
 'use strict';
 
-export default {
+module.exports = {
   meta: {
     type: 'suggestion',
     docs: {

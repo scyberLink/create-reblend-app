@@ -5,7 +5,7 @@ function Alert({ show, children }) {
   const ref = useRef();
   function onmousemove(e) {
     if (ref.current) {
-      ref.current.style.display = 'fixed';
+      ref.current.style.position = 'fixed';
       ref.current.style.top = e.offsetY + 'px';
       ref.current.style.left = e.offsetX + 'px';
     }
