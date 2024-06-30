@@ -19,7 +19,7 @@ module.exports = {
 
   parser: '@babel/eslint-parser',
 
-  plugins: ['reblend'],
+  plugins: ['eslint-plugin-reblend'],
 
   env: {
     browser: true,

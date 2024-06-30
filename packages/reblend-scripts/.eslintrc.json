@@ -18,7 +18,7 @@
   "overrides": [
     {
       "files": ["packages/creba-template/**/*.js"],
-      "extends": ["reblend-app" /* , "reblend-app/jest" */]
+      "extends": ["eslint-config-reblend-app" /* , "reblend-app/jest" */]
     }
   ]
 }

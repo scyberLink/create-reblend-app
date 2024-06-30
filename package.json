@@ -17,7 +17,6 @@
     "format": "npm run prettier -- --write"
   },
   "devDependencies": {
-    "eslint-config-reblend-app": "^7.0.19",
     "alex": "^8.2.0",
     "eslint": "^8.3.0",
     "globby": "^11.0.4",
