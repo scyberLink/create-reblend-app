@@ -894,7 +894,7 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1);
   }
 
-  makeCaretRange(packageJson.dependencies, 'reblend');
+  makeCaretRange(packageJson.dependencies, 'reblendjs');
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2) + os.EOL);
 }
