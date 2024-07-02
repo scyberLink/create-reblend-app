@@ -66,6 +66,9 @@ module.exports = function (api, opts, env) {
 
   return {
     presets: [
+      /* isTypeScriptEnabled &&  */ [
+        require('@babel/preset-typescript').default,
+      ],
       isEnvTest && [
         // ES features necessary for user's Node version
         require('@babel/preset-env').default,
@@ -101,7 +104,6 @@ module.exports = function (api, opts, env) {
           pragmaFrag: 'Reblend',
         },
       ],
-      isTypeScriptEnabled && [require('@babel/preset-typescript').default],
     ].filter(Boolean),
     plugins: [
       // Strip flow types before any other transform, emulating the behavior
