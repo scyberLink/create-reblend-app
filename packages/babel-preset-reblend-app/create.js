@@ -66,10 +66,8 @@ module.exports = function (api, opts, env) {
 
   return {
     presets: [
-      /* isTypeScriptEnabled &&  */ [
-        require('@babel/preset-typescript').default,
-      ],
-      isEnvTest && [
+      '@babel/preset-typescript',
+      /* isEnvTest && [
         // ES features necessary for user's Node version
         require('@babel/preset-env').default,
         {
@@ -78,7 +76,7 @@ module.exports = function (api, opts, env) {
           },
         },
       ],
-      /* (isEnvProduction || isEnvDevelopment) && */ [
+       (isEnvProduction || isEnvDevelopment) &&  [
         // Latest stable ECMAScript features
         require('@babel/preset-env').default,
         {
@@ -89,7 +87,7 @@ module.exports = function (api, opts, env) {
           // Exclude transforms that make all code slower
           exclude: ['transform-typeof-symbol'],
         },
-      ],
+      ], */
       [
         require('babel-preset-reblend').default,
         {
@@ -106,19 +104,19 @@ module.exports = function (api, opts, env) {
       ],
     ].filter(Boolean),
     plugins: [
-      // Strip flow types before any other transform, emulating the behavior
+      ,// Strip flow types before any other transform, emulating the behavior
       // order as-if the browser supported all of the succeeding features
       // https://github.com/scyberLink/create-reblend-app/pull/5182
       // We will conditionally enable this plugin below in overrides as it clashes with
       // @babel/plugin-proposal-decorators when using TypeScript.
       // https://github.com/scyberLink/create-reblend-app/issues/5741
-      isFlowEnabled && [
+      /* isFlowEnabled && [
         require('@babel/plugin-transform-flow-strip-types').default,
         false,
-      ],
+      ], */
       // Experimental macros support. Will be documented after it's had some time
       // in the wild.
-      require('babel-plugin-macros'),
+      /* require('babel-plugin-macros'), */
       // Disabled as it's handled automatically by preset-env, and `selectiveLoose` isn't
       // yet merged into babel: https://github.com/babel/babel/pull/9486
       // Related: https://github.com/scyberLink/create-reblend-app/pull/8215
@@ -143,10 +141,10 @@ module.exports = function (api, opts, env) {
       //   },
       // ],
       // Turn on legacy decorators for TypeScript files
-      isTypeScriptEnabled && [
+      /* isTypeScriptEnabled && [
         require('@babel/plugin-proposal-decorators').default,
         false,
-      ],
+      ], */
       // class { handleClick = () => { } }
       // Enable loose mode to use assignment instead of defineProperty
       // See discussion in https://github.com/scyberLink/create-reblend-app/issues/4263
@@ -156,7 +154,7 @@ module.exports = function (api, opts, env) {
       // * @babel/plugin-proposal-private-methods
       // * @babel/plugin-proposal-private-property-in-object
       // (when they are enabled)
-      [
+      /* [
         require('@babel/plugin-proposal-class-properties').default,
         {
           loose: true,
@@ -197,23 +195,24 @@ module.exports = function (api, opts, env) {
           // https://github.com/babel/babel/blob/090c364a90fe73d36a30707fc612ce037bdbbb24/packages/babel-plugin-transform-runtime/src/index.js#L35-L42
           absoluteRuntime: absoluteRuntimePath,
         },
-      ] /* ,
+      ] */
+      /* ,
       isEnvProduction && [
         // Remove PropTypes from production build
         require('babel-plugin-transform-react-remove-prop-types').default,
         {
           removeImport: true,
         },
-      ] */,
+      ] */
       // Optional chaining and nullish coalescing are supported in @babel/preset-env,
       // but not yet supported in webpack due to support missing from acorn.
       // These can be removed once webpack has support.
       // See https://github.com/scyberLink/create-reblend-app/issues/8445#issuecomment-588512250
-      require('@babel/plugin-proposal-optional-chaining').default,
-      require('@babel/plugin-proposal-nullish-coalescing-operator').default,
+      /* require('@babel/plugin-proposal-optional-chaining').default,
+      require('@babel/plugin-proposal-nullish-coalescing-operator').default, */
     ].filter(Boolean),
     overrides: [
-      isFlowEnabled && {
+      /* isFlowEnabled && {
         exclude: /\.tsx?$/,
         plugins: [require('@babel/plugin-transform-flow-strip-types').default],
       },
@@ -225,7 +224,7 @@ module.exports = function (api, opts, env) {
             { legacy: true },
           ],
         ],
-      },
+      }, */
     ].filter(Boolean),
   };
 };
