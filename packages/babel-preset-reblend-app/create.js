@@ -66,7 +66,7 @@ module.exports = function (api, opts, env) {
 
   return {
     presets: [
-      '@babel/preset-typescript',
+      [require('@babel/preset-typescript').default],
       /* isEnvTest && [
         // ES features necessary for user's Node version
         require('@babel/preset-env').default,
@@ -212,7 +212,7 @@ module.exports = function (api, opts, env) {
       require('@babel/plugin-proposal-nullish-coalescing-operator').default, */
     ].filter(Boolean),
     overrides: [
-      /* isFlowEnabled && {
+      isFlowEnabled && {
         exclude: /\.tsx?$/,
         plugins: [require('@babel/plugin-transform-flow-strip-types').default],
       },
@@ -224,7 +224,7 @@ module.exports = function (api, opts, env) {
             { legacy: true },
           ],
         ],
-      }, */
+      },
     ].filter(Boolean),
   };
 };

@@ -703,6 +703,8 @@ module.exports = function (webpackEnv) {
                 noEmit: true,
                 incremental: true,
                 tsBuildInfoFile: paths.appTsBuildInfoFile,
+                jsx: 'preserve',
+                jsxFactory: 'Reblend',
               },
             },
             context: paths.appPath,

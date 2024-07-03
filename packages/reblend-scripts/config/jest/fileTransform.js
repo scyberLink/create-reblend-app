@@ -21,17 +21,7 @@ module.exports = {
       module.exports = {
         __esModule: true,
         default: ${assetFilename},
-        ReblendComponent: Reblend.forwardRef(function ${componentName}(props, ref) {
-          return {
-            $$typeof: Symbol.for('reblend.element'),
-            type: 'svg',
-            ref: ref,
-            key: null,
-            props: Object.assign({}, props, {
-              children: ${assetFilename}
-            })
-          };
-        }),
+        ReblendComponent: Reblend.construct('svg', {src: ${assetFilename}}),
       };`;
     }
 

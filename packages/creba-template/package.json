@@ -26,6 +26,6 @@
   ],
   "gitHead": "9eae02cb5d9b8785dda233b246c5566c5c50db5f",
   "dependencies": {
-    "reblendjs": "^2.0.29"
+    "reblendjs": "^3.0.6"
   }
 }
