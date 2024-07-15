@@ -167,7 +167,7 @@ module.exports = function (webpackEnv) {
                   ],
                 ],
           },
-          sourceMap: false, //isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },
       },
     ].filter(Boolean);
@@ -246,9 +246,9 @@ module.exports = function (webpackEnv) {
     infrastructureLogging: {
       level: 'none',
     },
-    optimization: {
-      minimize: false, //isEnvProduction,
-      /* minimizer: [
+    /* optimization: {
+      minimize: isEnvProduction,
+      minimizer: [
         // This is only used in production mode
         new TerserPlugin({
           terserOptions: {
@@ -291,8 +291,8 @@ module.exports = function (webpackEnv) {
         }),
         // This is only used in production mode
         new CssMinimizerPlugin(),
-      ], */
-    },
+      ],
+    }, */
     resolve: {
       // This allows you to set a fallback for where webpack should look for modules.
       // We placed these paths second because we want `node_modules` to "win"
@@ -378,6 +378,9 @@ module.exports = function (webpackEnv) {
               test: /\.svg$/,
               use: [
                 {
+                  loader: require.resolve('./webpack/loader/svgLoader'),
+                },
+                {
                   loader: require.resolve('file-loader'),
                   options: {
                     name: 'static/media/[name].[hash].[ext]',
@@ -395,17 +398,17 @@ module.exports = function (webpackEnv) {
               include: paths.appSrc,
               loader: require.resolve('babel-loader'),
               options: {
-                customize: require.resolve(
+                /*  customize: require.resolve(
                   'babel-preset-reblend-app/webpack-overrides'
-                ),
-                presets: [
+                ), */
+                /* presets: [
                   [
                     presetReblendApp,
                     {
-                      runtime: /* hasJsxRuntime ? 'automatic' : */ 'classic',
+                      runtime: 'classic',
                     },
                   ],
-                ],
+                ], */ presets: [[require.resolve('@babel/preset-typescript')]],
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
@@ -414,7 +417,7 @@ module.exports = function (webpackEnv) {
                 // We remove this when the user ejects because the default
                 // is sane and uses Babel options. Instead of options, we use
                 // the reblend-scripts and babel-preset-reblend-app versions.
-                cacheIdentifier: getCacheIdentifier(
+                /* cacheIdentifier: getCacheIdentifier(
                   isEnvProduction
                     ? 'production'
                     : isEnvDevelopment && 'development',
@@ -424,21 +427,26 @@ module.exports = function (webpackEnv) {
                     'react-dev-utils',
                     'reblend-scripts',
                   ]
-                ),
+                ), */
                 // @remove-on-eject-end
-                plugins: [].filter(Boolean),
+                plugins: [
+                  require.resolve(
+                    'babel-plugin-transform-reblend-function-to-class'
+                  ),
+                  require.resolve('babel-plugin-transform-reblend-jsx'),
+                ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
                 // directory for faster rebuilds.
-                cacheDirectory: true,
+                //cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
-                cacheCompression: false,
-                compact: isEnvProduction,
+                //cacheCompression: false,
+                //compact: isEnvProduction,
               },
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
-            {
+            /* {
               test: /\.(js|mjs)$/,
               exclude: /@babel(?:\/|\\{1,2})runtime/,
               loader: require.resolve('babel-loader'),
@@ -474,7 +482,7 @@ module.exports = function (webpackEnv) {
                 sourceMaps: shouldUseSourceMap,
                 inputSourceMap: shouldUseSourceMap,
               },
-            },
+            }, */
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
             // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -704,7 +712,8 @@ module.exports = function (webpackEnv) {
                 incremental: true,
                 tsBuildInfoFile: paths.appTsBuildInfoFile,
                 jsx: 'preserve',
-                jsxFactory: 'Reblend',
+                jsxFactory: 'Reblend.construct',
+                jsxFactoryFragment: 'Reblend',
               },
             },
             context: paths.appPath,

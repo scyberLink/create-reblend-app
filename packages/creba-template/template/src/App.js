@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Reblend, { useState } from 'reblendjs';
+import Reblend, { useEffect, useState } from 'reblendjs';
 import Alert from './Alert';
 
 function App() {
@@ -9,6 +9,9 @@ function App() {
     setState(i + 1);
   }, 1000);
   const [showAlert, setShowAlert] = useState(false);
+  useEffect(() => {
+    console.log(this);
+  }, [showAlert]);
   return (
     <div className="App">
       <header className="App-header">
