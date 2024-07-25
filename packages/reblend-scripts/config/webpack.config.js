@@ -39,18 +39,6 @@ const createEnvironmentHash = require('./webpack/persistentCache/createEnvironme
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-
-const babelRuntimeEntry = require.resolve('babel-preset-reblend-app');
-const babelRuntimeEntryHelpers = require.resolve(
-  '@babel/runtime/helpers/esm/assertThisInitialized',
-  { paths: [babelRuntimeEntry] }
-);
-const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
-  paths: [babelRuntimeEntry],
-});
-
-const presetReblendApp = require.resolve('babel-preset-reblend-app');
-
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
@@ -327,12 +315,7 @@ module.exports = function (webpackEnv) {
         // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
         // please link the files into your node_modules/ and let module-resolution kick in.
         // Make sure your source files are compiled, as they will not be processed in any way.
-        new ModuleScopePlugin(paths.appSrc, [
-          paths.appPackageJson,
-          babelRuntimeEntry,
-          babelRuntimeEntryHelpers,
-          babelRuntimeRegenerator,
-        ]),
+        new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
       ],
     },
     module: {
@@ -374,7 +357,7 @@ module.exports = function (webpackEnv) {
                 },
               },
             },
-            {
+            /* {
               test: /\.svg$/,
               use: [
                 {
@@ -390,7 +373,7 @@ module.exports = function (webpackEnv) {
               issuer: {
                 and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
               },
-            },
+            }, */
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
@@ -401,14 +384,14 @@ module.exports = function (webpackEnv) {
                 /*  customize: require.resolve(
                   'babel-preset-reblend-app/webpack-overrides'
                 ), */
-                /* presets: [
+                presets: [
                   [
-                    presetReblendApp,
+                    require.resolve('babel-preset-reblend'),
                     {
                       runtime: 'classic',
                     },
                   ],
-                ], */ presets: [[require.resolve('@babel/preset-typescript')]],
+                ],
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
@@ -429,12 +412,7 @@ module.exports = function (webpackEnv) {
                   ]
                 ), */
                 // @remove-on-eject-end
-                plugins: [
-                  require.resolve(
-                    'babel-plugin-transform-reblend-function-to-class'
-                  ),
-                  require.resolve('babel-plugin-transform-reblend-jsx'),
-                ],
+                plugins: [],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
                 // directory for faster rebuilds.

@@ -26,7 +26,7 @@ const babelJest = require('babel-jest').default;
 module.exports = babelJest.createTransformer({
   presets: [
     [
-      require('babel-preset-reblend-app'),
+      require('babel-preset-reblend'),
       {
         runtime: /* hasJsxRuntime ? 'automatic' :  */ 'classic',
       },

@@ -29,11 +29,9 @@
   "types": "./lib/reblend-app.d.ts",
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@svgr/webpack": "^5.5.0",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.3.0",
     "babel-plugin-named-asset-import": "^0.3.8",
-    "babel-preset-reblend-app": "^11.0.24",
     "bfj": "^7.1.0",
     "browserslist": "^4.23.1",
     "camelcase": "^6.2.1",
@@ -72,7 +70,8 @@
     "webpack": "^5.92.1",
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.1.1",
-    "workbox-webpack-plugin": "^6.6.0"
+    "workbox-webpack-plugin": "^6.6.0",
+    "babel-preset-reblend": "latest"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"

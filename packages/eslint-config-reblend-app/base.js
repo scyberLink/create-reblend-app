@@ -33,7 +33,7 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
-      presets: [require.resolve('babel-preset-reblend-app/prod')],
+      presets: [require.resolve('babel-preset-reblend')],
     },
   },
 

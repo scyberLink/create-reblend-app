@@ -1,3 +1,5 @@
+'use strict';
+
 var _core = require('@babel/core');
 
 function svgLoader(source) {
@@ -6,17 +8,24 @@ function svgLoader(source) {
     babelrc: false,
     configFile: false,
 
-    plugins: [
-      require.resolve('babel-plugin-transform-reblend-function-to-class'),
-      require.resolve('babel-plugin-transform-reblend-jsx'),
+    presets: [
+      [
+        require.resolve('babel-plugin-transform-reblend-jsx'),
+        {
+          includeTypescript: false,
+        },
+      ],
     ],
   };
 
   const readSvg = () =>
     new Promise((resolve, reject) => {
       this.fs.readFile(this.resourcePath, (err, result) => {
-        if (err) reject(err);
-        resolve(result);
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
       });
     });
 
