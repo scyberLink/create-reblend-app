@@ -4,19 +4,6 @@ var _core = require('@babel/core');
 
 function svgLoader(source) {
   const callback = this.async();
-  const babelOptions = {
-    babelrc: false,
-    configFile: false,
-
-    presets: [
-      [
-        require.resolve('babel-plugin-transform-reblend-jsx'),
-        {
-          includeTypescript: false,
-        },
-      ],
-    ],
-  };
 
   const readSvg = () =>
     new Promise((resolve, reject) => {
@@ -40,14 +27,29 @@ function svgLoader(source) {
     return exportMatches ? `export default ${exportMatches[1]}` : null;
   })();
 
-  const tranformSvg = svg =>
+  const src = previousExport
+    .split(
+      previousExport.includes('default') ? 'export default ' : 'export '
+    )[1]
+    .split(';')[0];
+
+  const babelOptions = {
+    babelrc: false,
+    configFile: false,
+    filename: src,
+    presets: [
+      [
+        require.resolve('babel-preset-reblend') /* ,
+          {
+            includeTypescript: false,
+          }, */,
+      ],
+    ],
+  };
+
+  const tranformSvg = () =>
     new Promise((resolve, reject) => {
       try {
-        const src = previousExport
-          .split(
-            previousExport.includes('default') ? 'export default ' : 'export '
-          )[1]
-          .split(';')[0];
         const template = `
             import Reblend from 'reblendjs'
     

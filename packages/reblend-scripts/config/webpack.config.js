@@ -357,7 +357,7 @@ module.exports = function (webpackEnv) {
                 },
               },
             },
-            /* {
+            {
               test: /\.svg$/,
               use: [
                 {
@@ -373,7 +373,7 @@ module.exports = function (webpackEnv) {
               issuer: {
                 and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
               },
-            }, */
+            },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
