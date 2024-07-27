@@ -234,7 +234,7 @@ module.exports = function (webpackEnv) {
     infrastructureLogging: {
       level: 'none',
     },
-    /* optimization: {
+    optimization: {
       minimize: isEnvProduction,
       minimizer: [
         // This is only used in production mode
@@ -280,7 +280,7 @@ module.exports = function (webpackEnv) {
         // This is only used in production mode
         new CssMinimizerPlugin(),
       ],
-    }, */
+    },
     resolve: {
       // This allows you to set a fallback for where webpack should look for modules.
       // We placed these paths second because we want `node_modules` to "win"
@@ -400,17 +400,17 @@ module.exports = function (webpackEnv) {
                 // We remove this when the user ejects because the default
                 // is sane and uses Babel options. Instead of options, we use
                 // the reblend-scripts and babel-preset-reblend-app versions.
-                /* cacheIdentifier: getCacheIdentifier(
+                cacheIdentifier: getCacheIdentifier(
                   isEnvProduction
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-reblend-app',
+                    'babel-preset-reblend',
                     'react-dev-utils',
                     'reblend-scripts',
                   ]
-                ), */
+                ),
                 // @remove-on-eject-end
                 plugins: [],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
@@ -424,7 +424,7 @@ module.exports = function (webpackEnv) {
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
-            /* {
+            {
               test: /\.(js|mjs)$/,
               exclude: /@babel(?:\/|\\{1,2})runtime/,
               loader: require.resolve('babel-loader'),
@@ -432,12 +432,7 @@ module.exports = function (webpackEnv) {
                 babelrc: false,
                 configFile: false,
                 compact: false,
-                presets: [
-                  [
-                    require.resolve('babel-preset-reblend-app'),
-                    { helpers: true },
-                  ],
-                ],
+                presets: [[require.resolve('babel-preset-reblend')]],
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
@@ -448,7 +443,7 @@ module.exports = function (webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-reblend-app',
+                    'babel-preset-reblend',
                     'react-dev-utils',
                     'reblend-scripts',
                   ]
@@ -460,7 +455,7 @@ module.exports = function (webpackEnv) {
                 sourceMaps: shouldUseSourceMap,
                 inputSourceMap: shouldUseSourceMap,
               },
-            }, */
+            },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
             // "style" loader turns CSS into JS modules that inject <style> tags.
