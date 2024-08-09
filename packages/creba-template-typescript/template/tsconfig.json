@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "jsxFactory": "Reblend"
+    "jsxFactory": "Reblend.construct",
+    "jsxFragmentFactory": "Reblend"
   },
   "include": ["src"]
 }

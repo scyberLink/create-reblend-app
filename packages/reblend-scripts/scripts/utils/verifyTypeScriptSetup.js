@@ -133,7 +133,17 @@ function verifyTypeScriptSetup() {
     noEmit: { value: true },
     jsx: {
       parsedValue: ts.JsxEmit.Reblend,
-      value: 'react',
+      value: 'preserve',
+      reason: 'to match Reblend JSX transformation',
+    },
+    jsxFactory: {
+      parsedValue: ts.compilerOptions.jsxFactory,
+      value: 'Reblend.construct',
+      reason: 'to match Reblend JSX transformation',
+    },
+    jsxFragmentFactory: {
+      parsedValue: ts.compilerOptions.jsxFragmentFactory,
+      value: 'Reblend',
       reason: 'to match Reblend JSX transformation',
     },
     paths: { value: undefined, reason: 'aliased imports are not supported' },
