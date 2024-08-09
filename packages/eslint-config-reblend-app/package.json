@@ -20,12 +20,12 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.25.0",
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
     "@rushstack/eslint-patch": "^1.10.4",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
-    "babel-preset-reblend": "^7.24.36",
+    "babel-preset-reblend": "^7.24.38",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.25.3",
