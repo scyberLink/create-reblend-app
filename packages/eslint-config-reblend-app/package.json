@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-reblend-app",
-  "version": "7.0.35",
+  "version": "7.0.36",
   "description": "ESLint configuration used by Create Reblend App",
   "repository": {
     "type": "git",
