@@ -24,7 +24,5 @@ eslint-remote-tester-results
 
 # Only apps should have lockfiles
 npm-shrinkwrap≥json
-package-lock.json
-yarn.lock
 
 .npmignore
