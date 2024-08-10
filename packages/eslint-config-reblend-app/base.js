@@ -45,6 +45,6 @@ module.exports = {
 
   rules: {
     'reblend/jsx-uses-vars': 'warn',
-    'reblend/jsx-uses-reblend': 'warn',
+    'reblend/jsx-uses-reblend': 'error',
   },
 };
