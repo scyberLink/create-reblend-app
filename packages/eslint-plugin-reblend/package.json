@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-reblend",
-  "version": "7.34.7",
+  "version": "7.34.8",
   "author": "Emmanuel Elom <scansioquielom@gmail.com>, Yannick Croissant <yannick.croissant+npm@gmail.com>",
   "description": "Reblend specific linting rules for ESLint",
   "main": "index.js",
