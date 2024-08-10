@@ -254,7 +254,6 @@ module.exports = {
     'reblend/no-is-mounted': 'warn',
     'reblend/no-typos': 'error',
     'reblend/require-render-return': 'error',
-    'reblend/style-prop-object': 'warn',
 
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules
     'jsx-a11y/alt-text': 'warn',

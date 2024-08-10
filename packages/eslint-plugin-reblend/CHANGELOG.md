@@ -1134,7 +1134,7 @@ This change log adheres to standards from [Keep a CHANGELOG](https://keepachange
 - [`jsx-props-no-multi-spaces`]: fix a false positive for beside comments ([#2878][] @golopot)
 - [`jsx-no-undef`]: handle the TS parser combined with an invalid ecmaVersion ([#2882][] @ljharb)
 - [`no-unused-prop-types`]: apply `skipShapeProps` to exact types ([#2883][] @golopot)
-- [`no-danger-with-children`]/[`style-prop-object`]/[`no-adjacent-inline-elements`]: add category, URL ([#2891][] @thofmann)
+- [`no-danger-with-children`]/[`no-adjacent-inline-elements`]: add category, URL ([#2891][] @thofmann)
 
 ### Docs
 
@@ -1468,7 +1468,6 @@ This change log adheres to standards from [Keep a CHANGELOG](https://keepachange
 
 ### Added
 
-- [`style-prop-object`][]: Add `allow` option ([#1819][] @hornta)
 - [`jsx-pascal-case`][]: Support unicode characters ([#2557][] @Svish)
 
 ### Fixed
@@ -2855,7 +2854,6 @@ This change log adheres to standards from [Keep a CHANGELOG](https://keepachange
 
 - Fix [`require-default-props`][] crash ([#1029][])
 - Fix [`require-default-props`][] rule when using Flow type from assignment ([#1043][] @wyze @CarlRosell)
-- Fix [`style-prop-object`][] to not warn with explicit `null` or `undefined` ([#812][] @ljharb)
 - Fix [`no-unused-prop-types`][] props detection in stateless components ([#885][] @BarryThePenguin)
 - Fix [`display-name`] false positive with `document.createElement` ([#996][] @jomasti)
 - Fix ESLint 2 compatibility (@ljharb)
@@ -3087,11 +3085,6 @@ This change log adheres to standards from [Keep a CHANGELOG](https://keepachange
 - Add [`no-unescaped-entities`][] rule ([#681][] @pfhayes)
 - Add JSXExpressionContainer support to [`jsx-indent`][] rule ([#838][] @eelyafi)
 
-### Fixed
-
-- Fix [`style-prop-object`][] crash ([#834][])
-- Fix [`style-prop-object`][] false positive on computed properties ([#820][])
-- Fix [`style-prop-object`][] to deal with null and spread props that can't be resolved ([#809][] [#812][] @petersendidit)
 
 [6.3.0]: https://github.com/scyberLink/eslint-plugin-react/compare/v6.2.2...v6.3.0
 [#720]: https://github.com/scyberLink/eslint-plugin-react/issues/720
@@ -3141,7 +3134,6 @@ This change log adheres to standards from [Keep a CHANGELOG](https://keepachange
 ### Added
 
 - Add [`no-unused-prop-types`][] rule ([#226][] @EvNaverniouk)
-- Add [`style-prop-object`][] rule ([#715][] @petersendidit)
 - Add auto fix for [`self-closing-comp`][] ([#770][] @pl12133)
 - Add support for `typeAnnotations` in [`sort-comp`][] ([#235][] @dozoisch)
 - Add support for `PureComponent` in [`prefer-stateless-function`][] ([#781][] @tiemevanveen)
@@ -4809,6 +4801,5 @@ If you're still not using Reblend 15 you can keep the old behavior by setting th
 [`sort-prop-types`]: docs/rules/sort-prop-types.md
 [`state-in-constructor`]: docs/rules/state-in-constructor.md
 [`static-property-placement`]: docs/rules/static-property-placement.md
-[`style-prop-object`]: docs/rules/style-prop-object.md
 [`void-dom-elements-no-children`]: docs/rules/void-dom-elements-no-children.md
 [`wrap-multilines`]: docs/rules/jsx-wrap-multilines.md

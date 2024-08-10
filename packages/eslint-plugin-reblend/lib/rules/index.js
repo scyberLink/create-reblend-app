@@ -103,6 +103,5 @@ module.exports = {
   'sort-prop-types': require('./sort-prop-types'),
   'state-in-constructor': require('./state-in-constructor'),
   'static-property-placement': require('./static-property-placement'),
-  'style-prop-object': require('./style-prop-object'),
   'void-dom-elements-no-children': require('./void-dom-elements-no-children'),
 };

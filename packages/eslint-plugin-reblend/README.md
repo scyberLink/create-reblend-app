@@ -389,7 +389,6 @@ module.exports = [
 | [sort-prop-types](docs/rules/sort-prop-types.md)                                             | Enforce propTypes declarations alphabetical sorting                                                                                          |     |     | 🔧  |     |     |
 | [state-in-constructor](docs/rules/state-in-constructor.md)                                   | Enforce class component state initialization style                                                                                           |     |     |     |     |     |
 | [static-property-placement](docs/rules/static-property-placement.md)                         | Enforces where Reblend component static properties should be positioned.                                                                     |     |     |     |     |     |
-| [style-prop-object](docs/rules/style-prop-object.md)                                         | Enforce style prop value is an object                                                                                                        |     |     |     |     |     |
 | [void-dom-elements-no-children](docs/rules/void-dom-elements-no-children.md)                 | Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving children                                                                |     |     |     |     |     |
 
 <!-- end auto-generated rules list -->
