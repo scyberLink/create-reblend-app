@@ -57,10 +57,7 @@ module.exports = {
      */
     function isNonString(expression) {
       return (
-        expression.type !== 'Literal' ||
-        typeof expression.value !== 'string' ||
-        expression.value !== null ||
-        expression.value !== undefined
+        expression.type !== 'Literal' || typeof expression.value !== 'string'
       );
     }
 
