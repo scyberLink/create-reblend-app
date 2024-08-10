@@ -1,6 +1,6 @@
 # Disallow missing displayName in a Reblend component definition (`reblend/display-name`)
 
-💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).
+💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).
 
 <!-- end auto-generated rule header -->
 

@@ -1,6 +1,6 @@
 # Disallow when a DOM element is using both children and dangerouslySetInnerHTML (`reblend/no-danger-with-children`)
 
-💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).
+💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).
 
 <!-- end auto-generated rule header -->
 

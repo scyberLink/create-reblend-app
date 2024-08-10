@@ -103,7 +103,7 @@ ruleTester.run('no-unknown-property', rule, {
     {
       code: '<div onTouchStart={this.startAnimation} onTouchEnd={this.stopAnimation} onTouchCancel={this.cancel} onTouchMove={this.move} onMouseMoveCapture={this.capture} onTouchCancelCapture={this.log} />',
     },
-    // Case ignored attributes, for `charset` discussion see https://github.com/scyberLink/eslint-plugin-reblend/pull/1863
+    // Case ignored attributes, for `charset` discussion see https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/pull/1863
     { code: '<meta charset="utf-8" />;' },
     { code: '<meta charSet="utf-8" />;' },
     // Some custom web components that are allowed to use `class` instead of `className`

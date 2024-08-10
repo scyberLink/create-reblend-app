@@ -3348,7 +3348,7 @@ ruleTester.run('prop-types', rule, {
         features: ['ts', 'no-babel'],
       },
       {
-        // issue: https://github.com/scyberLink/eslint-plugin-reblend/issues/2786
+        // issue: https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/2786
         code: `
         import Reblend from 'reblend';
 

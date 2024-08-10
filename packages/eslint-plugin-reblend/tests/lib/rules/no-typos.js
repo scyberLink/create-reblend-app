@@ -291,7 +291,7 @@ ruleTester.run('no-typos', rule, {
         parserOptions,
       },
       {
-        // https://github.com/scyberLink/eslint-plugin-reblend/issues/1353
+        // https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/1353
         code: `
         function test(b) {
           return a.bind(b);

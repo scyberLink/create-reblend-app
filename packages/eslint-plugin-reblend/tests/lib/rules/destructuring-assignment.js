@@ -252,7 +252,7 @@ ruleTester.run('destructuring-assignment', rule, {
       options: ['always', { ignoreClassFields: true }],
       features: ['class fields'],
     },
-    // https://github.com/scyberLink/eslint-plugin-reblend/issues/2911
+    // https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/2911
     {
       code: `
         function Foo({ context }) {

@@ -13,7 +13,7 @@ This rule will check your class based Reblend components for
 - extension of `Reblend.PureComponent` (if the `ignorePureComponents` flag is true)
 - presence of `ref` attribute in JSX
 - the use of decorators
-- `render` method that return anything but JSX: `undefined`, `null`, etc. (only in Reblend <15.0.0, see [shared settings](https://github.com/scyberLink/eslint-plugin-reblend/blob/master/README.md#configuration) for Reblend version configuration)
+- `render` method that return anything but JSX: `undefined`, `null`, etc. (only in Reblend <15.0.0, see [shared settings](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/blob/master/README.md#configuration) for Reblend version configuration)
 
 If none of these elements are found, the rule will warn you to write this component as a pure function.
 

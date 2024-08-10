@@ -110,7 +110,7 @@ ruleTester.run('no-access-state-in-setstate', rule, {
       parserOptions,
     },
     {
-      // https://github.com/scyberLink/eslint-plugin-reblend/pull/1611
+      // https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/pull/1611
       code: `
         function testFunction({a, b}) {
         };

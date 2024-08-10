@@ -1,6 +1,6 @@
 # Disallow missing props validation in a Reblend component definition (`reblend/prop-types`)
 
-💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).
+💼 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).
 
 <!-- end auto-generated rule header -->
 
@@ -165,7 +165,7 @@ It would seem that some common properties such as `props.children` or `props.cla
 (and alike) need to be treated as exceptions.
 
 As it aptly noticed in
-[#7](https://github.com/scyberLink/eslint-plugin-reblend/issues/7)
+[#7](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/7)
 
 > Why should children be an exception?
 > Most components don't need `this.props.children`, so that makes it extra important

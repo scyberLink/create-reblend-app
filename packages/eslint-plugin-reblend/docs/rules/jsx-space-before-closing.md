@@ -6,7 +6,7 @@
 
 <!-- end auto-generated rule header -->
 
-Please use the `"beforeSelfClosing"` option of the [jsx-tag-spacing](https://github.com/scyberLink/eslint-plugin-reblend/blob/master/docs/rules/jsx-tag-spacing.md) rule instead.
+Please use the `"beforeSelfClosing"` option of the [jsx-tag-spacing](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/blob/master/docs/rules/jsx-tag-spacing.md) rule instead.
 
 Enforce or forbid spaces before the closing bracket of self-closing JSX elements.
 

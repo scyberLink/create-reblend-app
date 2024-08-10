@@ -1,6 +1,6 @@
 # Disallow usage of unsafe lifecycle methods (`reblend/no-unsafe`)
 
-🚫 This rule is _disabled_ in the ☑️ `recommended` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).
+🚫 This rule is _disabled_ in the ☑️ `recommended` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).
 
 <!-- end auto-generated rule header -->
 

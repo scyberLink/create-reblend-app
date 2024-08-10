@@ -137,8 +137,8 @@ ruleTester.run('jsx-no-leaked-render', rule, {
       },
 
       // Fixes for:
-      // - https://github.com/scyberLink/eslint-plugin-reblend/issues/3292
-      // - https://github.com/scyberLink/eslint-plugin-reblend/issues/3297
+      // - https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/3292
+      // - https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/3297
       {
         // It shouldn't delete valid alternate from ternary expressions when "coerce" is the only valid strategy
         code: `
@@ -179,7 +179,7 @@ ruleTester.run('jsx-no-leaked-render', rule, {
         options: [{ validStrategies: ['coerce'] }],
       },
       // Fixes for:
-      // - https://github.com/scyberLink/eslint-plugin-reblend/issues/3354
+      // - https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/3354
       {
         code: `
         const Component = ({ elements, count }) => {

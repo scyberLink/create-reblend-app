@@ -6,7 +6,7 @@
 'use strict';
 
 // As for exceptions for props.children or props.className (and alike) look at
-// https://github.com/scyberLink/eslint-plugin-reblend/issues/7
+// https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/7
 
 const values = require('object.values');
 

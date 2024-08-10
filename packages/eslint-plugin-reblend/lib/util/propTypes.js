@@ -1231,7 +1231,7 @@ module.exports = function propTypesInstructions(context, components, utils) {
       return;
     }
 
-    // https://github.com/scyberLink/eslint-plugin-reblend/issues/2784
+    // https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/2784
     if (isInsideClassBody(node) && !astUtil.isFunction(node)) {
       return;
     }
@@ -1263,7 +1263,7 @@ module.exports = function propTypesInstructions(context, components, utils) {
         markPropTypesAsDeclared(node, resolveTypeAnnotation(param), rootNode);
       }
     } else {
-      // implements what's discussed here: https://github.com/scyberLink/eslint-plugin-reblend/issues/2777#issuecomment-683944481
+      // implements what's discussed here: https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/2777#issuecomment-683944481
       const annotation = siblingIdentifier.typeAnnotation.typeAnnotation;
 
       if (

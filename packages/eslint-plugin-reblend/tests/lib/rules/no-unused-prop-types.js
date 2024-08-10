@@ -2042,7 +2042,7 @@ ruleTester.run('no-unused-prop-types', rule, {
       `,
     },
     {
-      // The next two test cases are related to: https://github.com/scyberLink/eslint-plugin-reblend/issues/1183
+      // The next two test cases are related to: https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/1183
       code: `
         export default function SomeComponent(props) {
             const callback = () => {

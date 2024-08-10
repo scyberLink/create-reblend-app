@@ -28,7 +28,7 @@ Use [our preset](#recommended) to get reasonable defaults:
   ]
 ```
 
-If you are using the [new JSX transform from Reblend 17](https://reblendjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-reblend-imports), extend [`reblend/jsx-runtime`](https://github.com/scyberLink/eslint-plugin-reblend/blob/c8917b0885094b5e4cc2a6f613f7fb6f16fe932e/index.js#L163-L176) in your eslint config (add `"plugin:reblend/jsx-runtime"` to `"extends"`) to disable the relevant rules.
+If you are using the [new JSX transform from Reblend 17](https://reblendjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-reblend-imports), extend [`reblend/jsx-runtime`](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/blob/c8917b0885094b5e4cc2a6f613f7fb6f16fe932e/index.js#L163-L176) in your eslint config (add `"plugin:reblend/jsx-runtime"` to `"extends"`) to disable the relevant rules.
 
 You should also specify settings that will be shared across all the plugin rules. ([More about eslint shared settings](https://eslint.org/docs/user-guide/configuring/configuration-files#adding-shared-settings))
 
@@ -280,10 +280,10 @@ module.exports = [
 
 <!-- begin auto-generated rules list -->
 
-💼 [Configurations](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs) enabled in.\
-🚫 [Configurations](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs) disabled in.\
-🏃 Set in the `jsx-runtime` [configuration](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).\
-☑️ Set in the `recommended` [configuration](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).\
+💼 [Configurations](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs) enabled in.\
+🚫 [Configurations](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs) disabled in.\
+🏃 Set in the `jsx-runtime` [configuration](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).\
+☑️ Set in the `recommended` [configuration](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).\
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).\
 💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).\
 ❌ Deprecated.
@@ -406,11 +406,11 @@ module.exports = [
 
 [npm-url]: https://npmjs.org/package/eslint-plugin-reblend
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-reblend.svg
-[status-url]: https://github.com/scyberLink/eslint-plugin-reblend/pulse
+[status-url]: https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/pulse
 [status-image]: https://img.shields.io/github/last-commit/scyberLink/eslint-plugin-reblend.svg
 [tidelift-url]: https://tidelift.com/subscription/pkg/npm-eslint-plugin-reblend?utm_source=npm-eslint-plugin-reblend&utm_medium=referral&utm_campaign=readme
 [tidelift-image]: https://tidelift.com/badges/package/npm/eslint-plugin-reblend?style=flat
 [package-url]: https://npmjs.org/package/eslint-plugin-reblend
 [npm-version-svg]: https://versionbadg.es/scyberLink/eslint-plugin-reblend.svg
 [actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/scyberLink/eslint-plugin-reblend
-[actions-url]: https://github.com/scyberLink/eslint-plugin-reblend/actions
+[actions-url]: https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/actions

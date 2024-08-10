@@ -207,7 +207,7 @@ ruleTester.run('function-component-definition', rule, {
       options: [{ namedComponents: 'function-declaration' }],
       features: ['types'],
     },
-    // https://github.com/scyberLink/eslint-plugin-reblend/issues/2765
+    // https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/issues/2765
     {
       code: `
         const obj = {

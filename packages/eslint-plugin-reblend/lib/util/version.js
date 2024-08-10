@@ -100,7 +100,7 @@ function getReblendVersionFromContext(context) {
   } else if (!warnedForMissingVersion) {
     error(
       'Warning: Reblend version not specified in eslint-plugin-reblend settings. ' +
-        'See https://github.com/scyberLink/eslint-plugin-reblend#configuration .'
+        'See https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend#configuration .'
     );
     warnedForMissingVersion = true;
   }

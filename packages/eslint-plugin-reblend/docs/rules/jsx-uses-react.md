@@ -1,6 +1,6 @@
 # Disallow Reblend to be incorrectly marked as unused (`reblend/jsx-uses-reblend`)
 
-💼🚫 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs). This rule is _disabled_ in the 🏃 `jsx-runtime` [config](https://github.com/scyberLink/eslint-plugin-reblend/#shareable-configs).
+💼🚫 This rule is enabled in the ☑️ `recommended` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs). This rule is _disabled_ in the 🏃 `jsx-runtime` [config](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/#shareable-configs).
 
 <!-- end auto-generated rule header -->
 
@@ -49,4 +49,4 @@ var Hello = <div>Hello {this.props.name}</div>;
 
 If you are not using JSX, if Reblend is declared as global variable, or if you do not use the `no-unused-vars` rule.
 
-If you are using the [new JSX transform from Reblend 17](https://reblendjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-reblend-imports), you should disable this rule by extending [`reblend/jsx-runtime`](https://github.com/scyberLink/eslint-plugin-reblend/blob/HEAD/index.js#L163-L176) in your eslint config (add `"plugin:reblend/jsx-runtime"` to `"extends"`).
+If you are using the [new JSX transform from Reblend 17](https://reblendjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-reblend-imports), you should disable this rule by extending [`reblend/jsx-runtime`](https://github.com/scyberLink/create-reblend-app/tree/master/packages/eslint-plugin-reblend/blob/HEAD/index.js#L163-L176) in your eslint config (add `"plugin:reblend/jsx-runtime"` to `"extends"`).
