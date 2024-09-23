@@ -37,7 +37,7 @@ const ForkTsCheckerWebpackPlugin =
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
 // @remove-on-eject-end
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
-
+const CopyPlugin = require('copy-webpack-plugin');
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
@@ -756,6 +756,20 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      /*new CopyPlugin({
+        patterns: [
+          {
+            from: path.resolve(
+              paths.appNodeModules,
+              'reblendjs',
+              'lib',
+              'internal',
+              'worker.min.js'
+            ),
+            to: path.resolve(paths.appBuild, 'worker.min.js'),
+          },
+        ],
+      }),*/
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
