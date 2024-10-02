@@ -17,8 +17,8 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+/* const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
+ */const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -619,7 +619,7 @@ module.exports = function (webpackEnv) {
           // both options are optional
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-        }),
+        }),/* 
       isEnvProduction &&
         new HtmlCriticalWebpackPlugin({
           base: paths.appBuild,
@@ -633,7 +633,7 @@ module.exports = function (webpackEnv) {
           penthouse: {
             blockJSRequests: false,
           },
-        }),
+        }), */
       // Generate an asset manifest file with the following content:
       // - "files" key: Mapping of all asset filenames to their corresponding
       //   output file so that tools can pick it up without having to parse
