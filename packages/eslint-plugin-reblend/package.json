@@ -99,5 +99,6 @@
       "tsconfig.json",
       ".markdownlint*"
     ]
-  }
+  },
+  "gitHead": "e631080c84bc5e249edfc012d12c15b88869258d"
 }
