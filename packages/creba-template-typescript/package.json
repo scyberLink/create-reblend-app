@@ -25,7 +25,7 @@
     "template",
     "template.json"
   ],
-  "gitHead": "e631080c84bc5e249edfc012d12c15b88869258d",
+  "gitHead": "c05c597779f7a946380b974094cbc72dad1028ba",
   "dependencies": {
     "reblendjs": "latest"
   }
