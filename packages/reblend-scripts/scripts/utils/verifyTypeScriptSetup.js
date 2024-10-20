@@ -136,12 +136,10 @@ function verifyTypeScriptSetup() {
       reason: 'to match Reblend JSX transformation',
     },
     jsxFactory: {
-      parsedValue: ts.compilerOptions.jsxFactory,
       value: 'Reblend.construct',
       reason: 'to match Reblend JSX transformation',
     },
     jsxFragmentFactory: {
-      parsedValue: ts.compilerOptions.jsxFragmentFactory,
       value: 'Reblend',
       reason: 'to match Reblend JSX transformation',
     },
