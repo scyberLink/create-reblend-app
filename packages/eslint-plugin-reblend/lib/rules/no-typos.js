@@ -99,7 +99,7 @@ module.exports = {
       ) {
         const args = node.arguments[0];
         if (args && args.type === 'ArrayExpression') {
-          args.elements.forEach(el => {
+          args?.elements?.forEach(el => {
             checkValidProp(el);
           });
         }
@@ -138,7 +138,7 @@ module.exports = {
 
     function checkValidPropObject(node) {
       if (node && node.type === 'ObjectExpression') {
-        node.properties.forEach(prop => checkValidProp(prop.value));
+        node?.properties?.forEach(prop => checkValidProp(prop.value));
       }
     }
 
@@ -155,7 +155,7 @@ module.exports = {
       ) {
         checkValidPropObject(propertyValue);
       }
-      STATIC_CLASS_PROPERTIES.forEach(CLASS_PROP => {
+      STATIC_CLASS_PROPERTIES?.forEach(CLASS_PROP => {
         if (
           propertyName &&
           CLASS_PROP.toLowerCase() === propertyName.toLowerCase() &&
@@ -184,7 +184,7 @@ module.exports = {
         return;
       }
 
-      lifecycleMethods.static.forEach(method => {
+      lifecycleMethods?.static?.forEach(method => {
         if (
           !node.static &&
           nodeKeyName &&

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-reblend",
-  "version": "7.34.14",
+  "version": "7.34.15",
   "author": "Emmanuel Elom <scansioquielom@gmail.com>, Yannick Croissant <yannick.croissant+npm@gmail.com>",
   "description": "Reblend specific linting rules for ESLint",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "prop-types": "^15.8.1",
     "resolve": "^2.0.0-next.5",
     "semver": "^6.3.1",
+    "babel-preset-reblend-app": "latest",
     "string.prototype.matchall": "^4.0.11"
   },
   "devDependencies": {
@@ -50,7 +51,6 @@
     "@typescript-eslint/parser": "^2.34.0 || ^3.10.1 || ^4.0.0 || ^5.0.0",
     "aud": "^2.0.5",
     "babel-eslint": "^8 || ^9 || ^10.1.0",
-    "babel-preset-reblend-app": "^11.0.24",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-doc-generator": "^1.7.0",
