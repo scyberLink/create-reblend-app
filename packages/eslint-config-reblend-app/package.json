@@ -25,14 +25,14 @@
     "@rushstack/eslint-patch": "^1.10.4",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
-    "babel-preset-reblend": "^7.24.49",
+    "babel-preset-reblend": "latest",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-reblend": "^7.34.14",
-    "eslint-plugin-reblend-hooks": "^5.0.22",
+    "eslint-plugin-reblend": "latest",
+    "eslint-plugin-reblend-hooks": "latest",
     "eslint-plugin-testing-library": "^5.0.1"
   },
   "engines": {
