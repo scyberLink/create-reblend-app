@@ -99,7 +99,7 @@ module.exports = {
       ) {
         const args = node.arguments[0];
         if (args && args.type === 'ArrayExpression') {
-          args?.elements?.forEach(el => {
+          args.elements?.forEach(el => {
             checkValidProp(el);
           });
         }
@@ -158,7 +158,7 @@ module.exports = {
       STATIC_CLASS_PROPERTIES?.forEach(CLASS_PROP => {
         if (
           propertyName &&
-          CLASS_PROP.toLowerCase() === propertyName.toLowerCase() &&
+          CLASS_PROP?.toLowerCase() === propertyName?.toLowerCase() &&
           CLASS_PROP !== propertyName
         ) {
           const messageId = isClassProperty
@@ -188,7 +188,7 @@ module.exports = {
         if (
           !node.static &&
           nodeKeyName &&
-          nodeKeyName.toLowerCase() === method.toLowerCase()
+          nodeKeyName?.toLowerCase() === method?.toLowerCase()
         ) {
           report(
             context,
@@ -209,7 +209,7 @@ module.exports = {
         .forEach(method => {
           if (
             nodeKeyName &&
-            method.toLowerCase() === nodeKeyName.toLowerCase() &&
+            method?.toLowerCase() === nodeKeyName?.toLowerCase() &&
             method !== nodeKeyName
           ) {
             report(
@@ -273,9 +273,9 @@ module.exports = {
 
         if (
           !propertyName ||
-          STATIC_CLASS_PROPERTIES.map(prop => prop.toLocaleLowerCase()).indexOf(
-            propertyName.toLowerCase()
-          ) === -1
+          STATIC_CLASS_PROPERTIES.map(prop =>
+            prop?.toLocaleLowerCase()
+          ).indexOf(propertyName?.toLowerCase()) === -1
         ) {
           return;
         }
