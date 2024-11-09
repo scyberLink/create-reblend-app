@@ -273,7 +273,7 @@ module.exports = {
 
         if (
           !propertyName ||
-          STATIC_CLASS_PROPERTIES.map(prop =>
+          STATIC_CLASS_PROPERTIES?.map(prop =>
             prop?.toLocaleLowerCase()
           ).indexOf(propertyName?.toLowerCase()) === -1
         ) {
