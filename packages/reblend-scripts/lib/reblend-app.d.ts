@@ -45,8 +45,9 @@ declare module '*.webp' {
 
 declare module '*.svg' {
   import { ReblendTyping } from 'reblend-typing';
+  import Reblend from 'reblendjs';
 
-  export const ReblendComponent: JSX.Element<
+  export const ReblendComponent: Reblend.JSX.Element<
     ReblendTyping.SVGProps<SVGSVGElement> & { title?: string }
   >;
 
