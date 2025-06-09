@@ -35,11 +35,12 @@ fi
 #npm run build
 
 # Get 2FA when not CI
-otp=""
-if [ -z $CI ]; then
-  echo "Please enter npm two-factor auth code: "
-  read otp
-fi
-
-# Go!
-NPM_CONFIG_OTP="$otp" ./node_modules/.bin/lerna publish "$@"
+#otp=""
+#if [ -z $CI ]; then
+#  echo "Please enter npm two-factor auth code: "
+#  read otp
+#fi
+#
+## Go!
+#NPM_CONFIG_OTP="$otp" 
+./node_modules/.bin/lerna publish "$@"
