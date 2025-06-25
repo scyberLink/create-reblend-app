@@ -18,7 +18,7 @@ const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 /* const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
- */const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+ */ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -37,7 +37,7 @@ const ForkTsCheckerWebpackPlugin =
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
 // @remove-on-eject-end
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
-const CopyPlugin = require('copy-webpack-plugin');
+//const CopyPlugin = require('copy-webpack-plugin');
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
@@ -99,6 +99,13 @@ module.exports = function (webpackEnv) {
   const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
   // common function to get style loaders
+  const resolveScriptDep = dep => {
+    const p = require.resolve(dep, {
+      paths: [paths.ownNodeModules],
+    });
+    return require(p);
+  };
+
   const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
       isEnvDevelopment && require.resolve('style-loader'),
@@ -115,21 +122,18 @@ module.exports = function (webpackEnv) {
         options: cssOptions,
       },
       {
-        // Options for PostCSS as we reference these options twice
-        // Adds vendor prefixing based on your specified browser support in
-        // package.json
         loader: require.resolve('postcss-loader'),
         options: {
           postcssOptions: {
-            // Necessary for external CSS imports to work
-            // https://github.com/scyberLink/create-reblend-app/issues/2677
             ident: 'postcss',
             config: false,
-            plugins: !useTailwind
+            plugins: useTailwind
               ? [
-                  'postcss-flexbugs-fixes',
+                  resolveScriptDep('tailwindcss'),
+                  resolveScriptDep('autoprefixer'),
+                  resolveScriptDep('postcss-flexbugs-fixes'),
                   [
-                    'postcss-preset-env',
+                    resolveScriptDep('postcss-preset-env'),
                     {
                       autoprefixer: {
                         flexbox: 'no-2009',
@@ -137,16 +141,11 @@ module.exports = function (webpackEnv) {
                       stage: 3,
                     },
                   ],
-                  // Adds PostCSS Normalize as the reset css with default options,
-                  // so that it honors browserslist config in package.json
-                  // which in turn let's users customize the target behavior as per their needs.
-                  'postcss-normalize',
                 ]
               : [
-                  'tailwindcss',
-                  'postcss-flexbugs-fixes',
+                  resolveScriptDep('postcss-flexbugs-fixes'),
                   [
-                    'postcss-preset-env',
+                    resolveScriptDep('postcss-preset-env'),
                     {
                       autoprefixer: {
                         flexbox: 'no-2009',
@@ -154,6 +153,7 @@ module.exports = function (webpackEnv) {
                       stage: 3,
                     },
                   ],
+                  resolveScriptDep('postcss-normalize'),
                 ],
           },
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
@@ -385,14 +385,7 @@ module.exports = function (webpackEnv) {
                 /*  customize: require.resolve(
                   'babel-preset-reblend-app/webpack-overrides'
                 ), */
-                presets: [
-                  [
-                    require.resolve('babel-preset-reblend'),
-                    {
-                      runtime: 'classic',
-                    },
-                  ],
-                ],
+                presets: [require.resolve('babel-preset-reblend')],
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
@@ -619,7 +612,7 @@ module.exports = function (webpackEnv) {
           // both options are optional
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-        }),/* 
+        }) /* 
       isEnvProduction &&
         new HtmlCriticalWebpackPlugin({
           base: paths.appBuild,
@@ -633,7 +626,7 @@ module.exports = function (webpackEnv) {
           penthouse: {
             blockJSRequests: false,
           },
-        }), */
+        }), */,
       // Generate an asset manifest file with the following content:
       // - "files" key: Mapping of all asset filenames to their corresponding
       //   output file so that tools can pick it up without having to parse
@@ -705,6 +698,7 @@ module.exports = function (webpackEnv) {
               },
             },
             context: paths.appPath,
+            configFile: paths.appTsConfig,
             diagnosticOptions: {
               syntactic: true,
             },

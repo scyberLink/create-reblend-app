@@ -1,5 +1,4 @@
 /// <reference types="node" />
-/// <reference types="reblend-typing" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
@@ -44,12 +43,9 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
-  import { ReblendTyping } from 'reblend-typing';
-  import Reblend from 'reblendjs';
+  import { ReblendNode } from 'reblend-typing';
 
-  export const ReblendComponent: Reblend.JSX.Element<
-    ReblendTyping.SVGProps<SVGSVGElement> & { title?: string }
-  >;
+  export const ReblendComponent: ReblendNode<Reblend.JSX.IntrinsicElements['svg'] & { title?: string }>
 
   const src: string;
   export default src;

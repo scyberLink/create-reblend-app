@@ -1,15 +1,15 @@
-import Reblend from 'reblendjs';
-import { useRef } from 'reblendjs/dist/internal/hooks';
+import Reblend, { useRef } from 'reblendjs';
 
 function Alert({ show, children }) {
   const ref = useRef();
-  function onmousemove(e) {
+
+  window.onmousemove = function onmousemove(e) {
     if (ref.current) {
       ref.current.style.position = 'fixed';
       ref.current.style.top = e.offsetY + 'px';
       ref.current.style.left = e.offsetX + 'px';
     }
-  }
+  };
 
   return (
     <>

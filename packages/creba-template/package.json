@@ -1,6 +1,6 @@
 {
   "name": "creba-template",
-  "version": "2.0.42",
+  "version": "3.0.0",
   "keywords": [
     "reblend",
     "reblendjs",
@@ -26,6 +26,6 @@
   ],
   "gitHead": "53e4fd7fee08da53e1855b168398ffdc922d99b2",
   "dependencies": {
-    "reblendjs": "9.3.4"
+    "reblendjs": "^12.1.0"
   }
 }

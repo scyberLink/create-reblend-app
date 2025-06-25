@@ -24,14 +24,7 @@ const babelJest = require('babel-jest').default;
 })(); */
 
 module.exports = babelJest.createTransformer({
-  presets: [
-    [
-      require('babel-preset-reblend'),
-      {
-        runtime: /* hasJsxRuntime ? 'automatic' :  */ 'classic',
-      },
-    ],
-  ],
+  presets: [[require('babel-preset-reblend'), {}]],
   babelrc: false,
   configFile: false,
 });

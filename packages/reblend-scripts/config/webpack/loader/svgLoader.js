@@ -1,12 +1,19 @@
 'use strict';
 
 var _core = require('@babel/core');
+const camelcase = require('camelcase');
+const path = require('path');
 
 function svgLoader(source) {
   const callback = this.async();
+  let pascalCaseFilename = 'SvgLogo';
 
   const readSvg = () =>
     new Promise((resolve, reject) => {
+      pascalCaseFilename = camelcase(path.parse(this.resourcePath).name, {
+        pascalCase: true,
+      });
+
       this.fs.readFile(this.resourcePath, (err, result) => {
         if (err) {
           reject(err);
@@ -37,29 +44,22 @@ function svgLoader(source) {
     babelrc: false,
     configFile: false,
     filename: src,
-    presets: [
-      [
-        require.resolve('babel-preset-reblend') /* ,
-          {
-            includeTypescript: false,
-          }, */,
-      ],
-    ],
+    presets: [[require.resolve('babel-preset-reblend'), {}]],
   };
 
-  const tranformSvg = () =>
+  const tranformSvg = svgContent => {
     new Promise((resolve, reject) => {
       try {
         const template = `
             import Reblend from 'reblendjs'
     
-            function SvgLogo(props) {
-                return (<img src={${src}} {...props}/>)
+            function ${pascalCaseFilename}() {
+                return (${svgContent})
             }
     
             ${previousExport}
             
-            export { SvgLogo as ReblendComponent }
+            export { ${pascalCaseFilename} }
             `;
         resolve(template);
       } catch (error) {
@@ -73,12 +73,9 @@ function svgLoader(source) {
       })
       .then(result => callback(null, result))
       .catch(err => callback(err));
+  };
 
-  if (previousExport) {
-    readSvg().then(tranformSvg);
-  } else {
-    tranformSvg(source);
-  }
+  readSvg().then(tranformSvg);
 }
 
 var _default = svgLoader;

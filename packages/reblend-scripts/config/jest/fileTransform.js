@@ -21,7 +21,7 @@ module.exports = {
       module.exports = {
         __esModule: true,
         default: ${assetFilename},
-        ReblendComponent: Reblend.construct('svg', {src: ${assetFilename}}),
+        ${componentName}: Reblend.construct('svg', {src: ${assetFilename}}),
       };`;
     }
 
