@@ -1,6 +1,6 @@
 {
   "name": "reblend-scripts-test",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "keywords": [
     "reblend",
     "reblendjs",
@@ -37,7 +37,7 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
-    "reblend-scripts": "^8.0.1",
+    "reblend-scripts": "^8.0.2",
     "reblendjs": "^12.1.0",
     "typescript": "^5.8.3",
     "web-vitals": "^2.1.0"
