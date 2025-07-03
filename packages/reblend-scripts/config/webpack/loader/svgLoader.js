@@ -59,7 +59,7 @@ function svgLoader(source) {
     
             ${previousExport}
             
-            export { ${pascalCaseFilename} }
+            export { ${pascalCaseFilename}, ${pascalCaseFilename} as Component }
             `;
         resolve(template);
       } catch (error) {
