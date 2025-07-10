@@ -25,7 +25,7 @@
     "@rushstack/eslint-patch": "^1.10.4",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
-    "babel-preset-reblend": "^11.2.5",
+    "babel-preset-reblend": "^11.2.6",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.31.0",
